@@ -1,6 +1,7 @@
 :root {
-  --primary: #57dfff;
-  --bg: #353535;
+  --primary: #29cefe;
+  --bg: #091b29;
+  --glp: #292929;
 }
 
 * {
@@ -13,8 +14,9 @@
 }
 
 body {
-  background-color: var();
+  background-color: var(--bg);
   font-family: 'Poppins', sans-serif;
+  color: white;
 }
 
 .navbar {
@@ -33,4 +35,8 @@ body {
 
 .navbar .navbar-nav a {
   margin-left: 1rem;
+}
+
+.navbar .navbar-sm a {
+  margin-right: 0.7rem;
 }
