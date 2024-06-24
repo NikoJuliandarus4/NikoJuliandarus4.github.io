@@ -35,6 +35,11 @@ body {
 
 .navbar .navbar-nav a {
   margin-left: 1rem;
+  color: white;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
 }
 
 .navbar .navbar-sm a {
