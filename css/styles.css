@@ -177,3 +177,38 @@ button.edit::before {
 button.delete::before {
     content: '\f1f8'; /* Ikon tempat sampah */
 }
+
+
+
+
+
+
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product-section {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .product-card h2 {
+        font-size: 1.6em;
+    }
+
+    .form input, .form button {
+        font-size: 14px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
