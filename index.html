@@ -14,7 +14,51 @@
     </header>
     
     <div class="content">
-      
+      <section class="product-section">
+        <div class="product-card">
+          <h2>Stok Barang System</h2>
+          <div class="form">
+            <input type="text" id="systemName" placeholder="Nama Stok Barang System">
+            <input type="number" id="systemQuantity" placeholder="Jumlah">
+            <button onclick="addSystem()">Tambah Stok</button>
+          </div>
+          <table id="systemTable">
+            <thead>
+              <tr>
+                <th>Nama Barang</th>
+                <th>Jumlah</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data stok barang System akan muncul di sini -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="product-section">
+        <div class="product-card">
+          <h2>Stok Barang Furniture</h2>
+          <div class="form">
+            <input type="text" id="furnitureName" placeholder="Nama Stok Barang Furniture">
+            <input type="number" id="furnitureQuantity" placeholder="Jumlah">
+            <button onclick="addFurniture()">Tambah Stok</button>
+          </div>
+          <table id="furnitureTable">
+            <thead>
+              <tr>
+                <th>Nama Barang</th>
+                <th>Jumlah</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data stok barang Furniture akan muncul di sini -->
+            </tbody>
+          </table>
+        </div>
+      </section>
     </div>
   </div>
 </body>
