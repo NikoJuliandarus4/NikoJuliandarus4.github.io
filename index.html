@@ -61,4 +61,52 @@
       </section>
     </div>
   </div>
+  <div class="log-section">
+    <h2 style="color: #dc3545;">Log Aktivitas Barang Keluar</h2>
+    <form id="logFormKeluar">
+      <input type="text" id="eventNameKeluar" placeholder="Nama Event" required>
+      <input type="text" id="itemNameKeluar" placeholder="Nama Barang" required>
+      <input type="number" id="itemQuantityKeluar" placeholder="Jumlah" required>
+      <input type="text" id="itemTimeKeluar" placeholder="Waktu (YYYY-MM-DD)" required>
+      <button type="submit" style="background-color: #dc3545;">Tambah Barang Keluar</button>
+    </form>
+    <table id="logTableKeluar">
+      <thead>
+        <tr>
+          <th>Nama Event</th>
+          <th>Nama Barang</th>
+          <th>Jumlah</th>
+          <th>Waktu</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="logTableBodyKeluar">
+        <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+</div>
+  <div class="log-section">
+    <h2>Log Aktivitas Barang Masuk</h2>
+    <form id="logFormMasuk">
+      <input type="text" id="eventNameMasuk" placeholder="Nama Event" required>
+      <input type="text" id="itemNameMasuk" placeholder="Nama Barang" required>
+      <input type="number" id="itemQuantityMasuk" placeholder="Jumlah" required>
+      <input type="text" id="itemTimeMasuk" placeholder="Waktu (YYYY-MM-DD)" required>
+      <button type="submit">Tambah Barang Masuk</button>
+    </form>
+    <table id="logTableMasuk">
+      <thead>
+        <tr>
+          <th>Nama Event</th>
+          <th>Nama Barang</th>
+          <th>Jumlah</th>
+          <th>Waktu</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="logTableBodyMasuk">
+        <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+</div>
 </body>
