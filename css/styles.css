@@ -178,7 +178,125 @@ button.delete::before {
     content: '\f1f8'; /* Ikon tempat sampah */
 }
 
+/* Berita Event - Styling for Logs */
 
+/* General Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Titles */
+h2 {
+    font-size: 24px;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Log Section */
+.log-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 90%;
+    width: 800px;
+}
+
+/* Form Styling */
+#logFormMasuk, #logFormKeluar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+#logFormMasuk input, #logFormKeluar input, 
+#logFormMasuk button, #logFormKeluar button {
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#logFormMasuk button, #logFormKeluar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#logFormMasuk button:hover, #logFormKeluar button:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f1f1f1;
+}
+
+table tr:hover td {
+    background-color: #e0e7ff;
+}
+
+/* Action Buttons */
+table button {
+    padding: 6px 12px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 3px;
+    transition: background-color 0.3s;
+}
+
+table button.edit-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+table button.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+table button.edit-btn:hover {
+    background-color: #218838;
+}
+
+table button.delete-btn:hover {
+    background-color: #c82333;
+}
 
 
 
