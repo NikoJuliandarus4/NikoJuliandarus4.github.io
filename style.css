@@ -1,336 +1,129 @@
-/* Reset styles */
-* {
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-html, body {
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    background-color: #f4f7fa;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Dashboard Container */
-.dashboard {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-/* Header */
-header {
-    background-color: #007BFF;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-h1 {
-    font-size: 2.5em;
-    text-transform: uppercase;
-}
-
-/* Content Layout */
-.content {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    padding: 20px;
-    gap: 20px;
-}
-
-.product-section, .log-selection {
-    width: 100%;
-    max-width: 550px;
-    flex-grow: 1;
-}
-
-.product-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.product-card h2 {
+    background-color: #f9f9f9;
     color: #333;
-    font-size: 1.8em;
-    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
-/* Form Styles */
-.form {
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #ff8c42; /* Orange */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+}
+
+/* Stock Section Styles */
+.stock-section {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stock-section h2 {
+    margin-top: 0;
+    color: #ff8c42; /* Orange */
+}
+
+.stock-form {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 20px;
 }
 
-.form input, .form button {
-    padding: 12px;
-    font-size: 16px;
+.stock-form input {
+    flex: 1;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    transition: 0.3s ease;
-    width: 100%;
+    font-size: 1rem;
 }
 
-.form input:focus {
-    border-color: #007BFF;
-    outline: none;
-}
-
-.form button {
-    background-color: #007BFF;
+.stock-form button {
+    padding: 10px 20px;
+    background-color: #ff8c42; /* Orange */
     color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s ease;
+    font-size: 1rem;
 }
 
-.form button:hover {
-    background-color: #0056b3;
+.stock-form button:hover {
+    background-color: #e67e22; /* Darker Orange */
 }
 
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
+.stock-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stock-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.stock-item span {
+    font-size: 1.1rem;
+}
+
+.stock-item button {
+    padding: 5px 10px;
+    background-color: #ff8c42; /* Orange */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.stock-item button:hover {
+    background-color: #e67e22; /* Darker Orange */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
     margin-top: 20px;
 }
 
-table th, table td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: center;
-    font-size: 16px;
-}
-
-table th {
-    background-color: #007BFF;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-table tr:hover {
-    background-color: #f1f1f1;
-}
-
-/* Tombol Edit dan Hapus */
-button.edit, button.delete {
-    padding: 6px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #fff;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-}
-
-button.edit {
-    background-color: #28a745;
-    transition: background-color 0.3s;
-}
-
-button.edit:hover {
-    background-color: #218838;
-}
-
-button.delete {
-    background-color: #dc3545;
-    transition: background-color 0.3s;
-}
-
-button.delete:hover {
-    background-color: #c82333;
-}
-
-/* Ikon dalam tombol */
-button.edit::before, button.delete::before {
-    font-family: 'FontAwesome';
-}
-
-button.edit::before {
-    content: '\f044'; /* Ikon pensil */
-}
-
-button.delete::before {
-    content: '\f1f8'; /* Ikon tempat sampah */
-}
-
-
-/* Berita Event - Styling for Logs */
-
-/* General Layout */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-/* Section Titles */
-h2 {
-    font-size: 24px;
-    color: #007bff;
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-/* Log Section */
-.log-section {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    max-width: 90%;
-    width: 800px;
-}
-
-/* Form Styling */
-#logFormMasuk, #logFormKeluar {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
-    justify-content: center;
-}
-
-#logFormMasuk input, #logFormKeluar input, 
-#logFormMasuk button, #logFormKeluar button {
-    padding: 8px 10px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-#logFormMasuk button, #logFormKeluar button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#logFormMasuk button:hover, #logFormKeluar button:hover {
-    background-color: #0056b3;
-}
-
-/* Table Styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    font-size: 14px;
-}
-
-table th, table td {
-    padding: 12px 15px;
-    text-align: center;
-}
-
-table th {
-    background-color: #007bff;
-    color: #fff;
-    font-weight: bold;
-}
-
-table td {
-    background-color: #f9f9f9;
-}
-
-table tr:nth-child(even) td {
-    background-color: #f1f1f1;
-}
-
-table tr:hover td {
-    background-color: #e0e7ff;
-}
-
-/* Action Buttons */
-table button {
-    padding: 6px 12px;
-    font-size: 13px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 0 3px;
-    transition: background-color 0.3s;
-}
-
-table button.edit-btn {
-    background-color: #28a745;
-    color: #fff;
-}
-
-table button.delete-btn {
-    background-color: #dc3545;
-    color: #fff;
-}
-
-table button.edit-btn:hover {
-    background-color: #218838;
-}
-
-table button.delete-btn:hover {
-    background-color: #c82333;
-}
-
-
-
-
-
-/* Responsiveness */
-@media screen and (max-width: 768px) {
-    .content {
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .stock-form {
         flex-direction: column;
-        gap: 20px;
     }
 
-    .product-section {
+    .stock-form input, .stock-form button {
         width: 100%;
     }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    .product-card h2 {
-        font-size: 1.6em;
-    }
-
-    .form input, .form button {
-        font-size: 14px;
-    }
-
-    table th, table td {
-        font-size: 14px;
-        padding: 10px;
-    }
 }
-
