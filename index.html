@@ -3,123 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maximaindo Stock</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMw5KzyeNfJybC8Dztz4gYfRiAcHiE/fiJtyS23" crossorigin="anonymous">
+    <title>Stock Management</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="dasboard">
     <header>
-      <h1>Warehouse Stock Management</h1>
+        <div class="container">
+            <h1>Stock Management System</h1>
+            <p>Manage your stock efficiently</p>
+        </div>
     </header>
-    
-    <div class="content">
-      
-      <!-- Stock Data System -->
-      <section class="product-section">
-        <div class="product-card">
-          <h2>Stok Barang System</h2>
-          <div class="form">
-            <input type="text" id="systemName" placeholder="Nama Stok Barang System">
-            <input type="number" id="systemQuantity" placeholder="Jumlah">
-            <button onclick="addSystem()">Tambah Stok</button>
-          </div>
-          <table id="systemTable">
-            <thead>
-              <tr>
-                <th>Nama Barang</th>
-                <th>Jumlah</th>
-                <th>Aksi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Data stok barang System akan muncul di sini -->
-            </tbody>
-          </table>
-        </div>
-      </section>
-      
-      <!-- Stock Data Furniture -->
-      <section class="product-section">
-        <div class="product-card">
-          <h2>Stok Barang Furniture</h2>
-          <div class="form">
-            <input type="text" id="furnitureName" placeholder="Nama Stok Barang Furniture">
-            <input type="number" id="furnitureQuantity" placeholder="Jumlah">
-            <button onclick="addFurniture()">Tambah Stok</button>
-          </div>
-          <table id="furnitureTable">
-            <thead>
-              <tr>
-                <th>Nama Barang</th>
-                <th>Jumlah</th>
-                <th>Aksi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Data stok barang Furniture akan muncul di sini -->
-            </tbody>
-          </table>
-        </div>
-      </section>
-      
-    </div>
-  </div>
-  
-  <!-- Barang Keluar -->
-  <div class="log-section">
-    <h2>Log Aktivitas Barang Keluar</h2>
-    <form id="logFormKeluar">
-      <input type="text" id="eventNameKeluar" placeholder="Nama Event" required>
-      <input type="text" id="itemNameKeluar" placeholder="Nama Barang" required>
-      <input type="number" id="itemQuantityKeluar" placeholder="Jumlah" required>
-      <input type="text" id="itemTimeKeluar" placeholder="Waktu (YYYY-MM-DD)" required>
-      <button type="submit">Tambah Barang Keluar</button>
-    </form>
-    <table id="logTableKeluar">
-      <thead>
-        <tr>
-          <th>Nama Event</th>
-          <th>Nama Barang</th>
-          <th>Jumlah</th>
-          <th>Waktu</th>
-          <th>Aksi</th>
-        </tr>
-      </thead>
-      <tbody id="logTableBodyKeluar">
-        <!-- Rows will be dynamically added here -->
-      </tbody>
-    </table>
-</div>
 
-  <!-- Barang Masuk -->
-  <div class="log-section">
-    <h2>Log Aktivitas Barang Masuk</h2>
-    <form id="logFormMasuk">
-      <input type="text" id="eventNameMasuk" placeholder="Nama Event" required>
-      <input type="text" id="itemNameMasuk" placeholder="Nama Barang" required>
-      <input type="number" id="itemQuantityMasuk" placeholder="Jumlah" required>
-      <input type="text" id="itemTimeMasuk" placeholder="Waktu (YYYY-MM-DD)" required>
-      <button type="submit">Tambah Barang Masuk</button>
-    </form>
-    <table id="logTableMasuk">
-      <thead>
-        <tr>
-          <th>Nama Event</th>
-          <th>Nama Barang</th>
-          <th>Jumlah</th>
-          <th>Waktu</th>
-          <th>Aksi</th>
-        </tr>
-      </thead>
-      <tbody id="logTableBodyMasuk">
-        <!-- Rows will be dynamically added here -->
-      </tbody>
-    </table>
-</div>
+    <main class="container">
+        <!-- Stock System Section -->
+        <section class="stock-section">
+            <h2>Stock System</h2>
+            <div class="stock-form">
+                <input type="text" id="system-name" placeholder="Item Name">
+                <input type="number" id="system-quantity" placeholder="Quantity">
+                <button onclick="addSystemStock()">Add Stock</button>
+            </div>
+            <div class="stock-list" id="system-stock-list">
+                <!-- Stock items will be added here dynamically -->
+            </div>
+        </section>
 
-  <!-- Script JavaScript -->
-  <script src="script.js"></script>
-  
+        <!-- Stock Furniture Section -->
+        <section class="stock-section">
+            <h2>Stock Furniture</h2>
+            <div class="stock-form">
+                <input type="text" id="furniture-name" placeholder="Item Name">
+                <input type="number" id="furniture-quantity" placeholder="Quantity">
+                <button onclick="addFurnitureStock()">Add Stock</button>
+            </div>
+            <div class="stock-list" id="furniture-stock-list">
+                <!-- Stock items will be added here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Stock Management System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
