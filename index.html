@@ -3,50 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Management</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Niko Juliandarus - Network Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Stock Management System</h1>
-            <p>Manage your stock efficiently</p>
-        </div>
-    </header>
-
-    <main class="container">
-        <!-- Stock System Section -->
-        <section class="stock-section">
-            <h2>Stock System</h2>
-            <div class="stock-form">
-                <input type="text" id="system-name" placeholder="Item Name">
-                <input type="number" id="system-quantity" placeholder="Quantity">
-                <button onclick="addSystemStock()">Add Stock</button>
+    <!-- Outer Box -->
+    <div class="outer-box">
+        <!-- Navbar -->
+        <nav>
+            <div class="nav-left">
+                <span>Portfolio</span>
             </div>
-            <div class="stock-list" id="system-stock-list">
-                <!-- Stock items will be added here dynamically -->
+            <div class="nav-right">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#service">Service</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="home">
+            <div class="home-container">
+                <div class="home-left">
+                    <h1>Niko Juliandarus</h1>
+                    <h2>Network Engineer Enthusiast</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.</p>
+                    <button id="downloadCV">Download CV</button>
+                    <div class="social-icons">
+                        <a href="#" class="fab fa-linkedin"></a>
+                        <a href="#" class="fab fa-github"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="home-right">
+                    <img src="home.png" alt="Profile Image">
+                </div>
             </div>
         </section>
 
-        <!-- Stock Furniture Section -->
-        <section class="stock-section">
-            <h2>Stock Furniture</h2>
-            <div class="stock-form">
-                <input type="text" id="furniture-name" placeholder="Item Name">
-                <input type="number" id="furniture-quantity" placeholder="Quantity">
-                <button onclick="addFurnitureStock()">Add Stock</button>
-            </div>
-            <div class="stock-list" id="furniture-stock-list">
-                <!-- Stock items will be added here dynamically -->
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Stock Management System. All rights reserved.</p>
+        <!-- About Section -->
+        <section id="about">
+          <div class="about-container">
+        <div class="about-right">
+            <img src="profil.jpg" alt="About Image">
         </div>
-    </footer>
+        <div class="about-left">
+            <h1>About</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nunc, nec aliquam nisl nunc nec nisl. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nunc, nec aliquam nisl nunc nec nisl.</p>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+    <div class="portfolio-container">
+        <div class="portfolio-buttons">
+            <button id="workExperienceBtn" class="active">Work Experience</button>
+            <button id="projectBtn">Project</button>
+        </div>
+        <div id="workExperienceContent" class="portfolio-content">
+            <h1>Work Experience</h1>
+            <ul>
+                <li>
+                    <h3>Network Engineer at Company A</h3>
+                    <p><strong>Duration:</strong> Jan 2022 - Present</p>
+                    <p><strong>Description:</strong> Managed network infrastructure, implemented security protocols, and optimized network performance.</p>
+                </li>
+                <li>
+                    <h3>IT Support Specialist at Company B</h3>
+                    <p><strong>Duration:</strong> Jun 2019 - Dec 2021</p>
+                    <p><strong>Description:</strong> Provided technical support, resolved network issues, and maintained hardware and software systems.</p>
+                </li>
+                <li>
+                    <h3>Junior Network Administrator at Company C</h3>
+                    <p><strong>Duration:</strong> Jan 2018 - May 2019</p>
+                    <p><strong>Description:</strong> Assisted in network administration tasks, monitored network performance, and troubleshooted connectivity issues.</p>
+                </li>
+            </ul>
+        </div>
+        <div id="projectContent" class="portfolio-content" style="display: none;">
+            <h1>Project</h1>
+            <ul>
+                <li>
+                    <div class="project-item">
+                        <div class="project-text">
+                            <h3>Network Optimization Project</h3>
+                            <p><strong>Duration:</strong> Mar 2023 - Aug 2023</p>
+                            <p><strong>Description:</strong> Designed and implemented a network optimization solution that improved performance by 30%.</p>
+                        </div>
+                        <div class="project-image">
+                            <img src="pwinbox.jpg" alt="Network Optimization Project" class="modal-trigger">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="project-item">
+                        <div class="project-text">
+                            <h3>Security Enhancement Project</h3>
+                            <p><strong>Duration:</strong> Sep 2022 - Feb 2023</p>
+                            <p><strong>Description:</strong> Developed and deployed a new security framework to protect against cyber threats.</p>
+                        </div>
+                        <div class="project-image">
+                            <img src="pcisco.jpg" alt="Security Enhancement Project" class="modal-trigger">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="project-item">
+                        <div class="project-text">
+                            <h3>Cloud Migration Project</h3>
+                            <p><strong>Duration:</strong> Jan 2021 - Jun 2021</p>
+                            <p><strong>Description:</strong> Led the migration of on-premise infrastructure to a cloud-based solution, reducing costs by 20%.</p>
+                        </div>
+                        <div class="project-image">
+                            <img src="project3.jpg" alt="Cloud Migration Project" class="modal-trigger">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+        
+      
 
     <script src="script.js"></script>
 </body>
