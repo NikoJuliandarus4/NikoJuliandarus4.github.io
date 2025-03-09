@@ -1,87 +1,64 @@
-// Stock System Data
-let systemStock = JSON.parse(localStorage.getItem('systemStock')) || [];
+// script.js
 
-// Stock Furniture Data
-let furnitureStock = JSON.parse(localStorage.getItem('furnitureStock')) || [];
+// Add an event listener to the "Download CV" button
+document.getElementById('downloadCV').addEventListener('click', function() {
+    alert('Downloading CV...'); // Replace this with actual download functionality
+    // You can add logic to trigger a file download here
+});
 
-// Function to save data to localStorage
-function saveToLocalStorage() {
-    localStorage.setItem('systemStock', JSON.stringify(systemStock));
-    localStorage.setItem('furnitureStock', JSON.stringify(furnitureStock));
-}
 
-// Add Stock to System
-function addSystemStock() {
-    const name = document.getElementById('system-name').value;
-    const quantity = parseInt(document.getElementById('system-quantity').value);
 
-    if (name && !isNaN(quantity)) {
-        systemStock.push({ name, quantity });
-        saveToLocalStorage();
-        updateStockList('system-stock-list', systemStock);
-        document.getElementById('system-name').value = '';
-        document.getElementById('system-quantity').value = '';
-    } else {
-        alert('Please enter valid item name and quantity.');
-    }
-}
 
-// Add Stock to Furniture
-function addFurnitureStock() {
-    const name = document.getElementById('furniture-name').value;
-    const quantity = parseInt(document.getElementById('furniture-quantity').value);
+document.addEventListener('DOMContentLoaded', function() {
+    const workExperienceBtn = document.getElementById('workExperienceBtn');
+    const projectBtn = document.getElementById('projectBtn');
+    const workExperienceContent = document.getElementById('workExperienceContent');
+    const projectContent = document.getElementById('projectContent');
 
-    if (name && !isNaN(quantity)) {
-        furnitureStock.push({ name, quantity });
-        saveToLocalStorage();
-        updateStockList('furniture-stock-list', furnitureStock);
-        document.getElementById('furniture-name').value = '';
-        document.getElementById('furniture-quantity').value = '';
-    } else {
-        alert('Please enter valid item name and quantity.');
-    }
-}
-
-// Update Stock List
-function updateStockList(listId, stockArray) {
-    const list = document.getElementById(listId);
-    list.innerHTML = '';
-
-    stockArray.forEach((item, index) => {
-        const stockItem = document.createElement('div');
-        stockItem.className = 'stock-item';
-        stockItem.innerHTML = `
-            <span>${item.name} - ${item.quantity}</span>
-            <div>
-                <button onclick="editStock(${index}, '${listId}')">Edit</button>
-                <button onclick="deleteStock(${index}, '${listId}')">Delete</button>
-            </div>
-        `;
-        list.appendChild(stockItem);
+    workExperienceBtn.addEventListener('click', function() {
+        workExperienceContent.style.display = 'block';
+        projectContent.style.display = 'none';
+        workExperienceBtn.classList.add('active');
+        projectBtn.classList.remove('active');
     });
-}
 
-// Edit Stock
-function editStock(index, listId) {
-    const stockArray = listId === 'system-stock-list' ? systemStock : furnitureStock;
-    const newQuantity = prompt('Enter new quantity:');
-    if (!isNaN(newQuantity) && newQuantity !== null) {
-        stockArray[index].quantity = parseInt(newQuantity);
-        saveToLocalStorage();
-        updateStockList(listId, stockArray);
-    }
-}
+    projectBtn.addEventListener('click', function() {
+        workExperienceContent.style.display = 'none';
+        projectContent.style.display = 'block';
+        projectBtn.classList.add('active');
+        workExperienceBtn.classList.remove('active');
+    });
+});
 
-// Delete Stock
-function deleteStock(index, listId) {
-    const stockArray = listId === 'system-stock-list' ? systemStock : furnitureStock;
-    stockArray.splice(index, 1);
-    saveToLocalStorage();
-    updateStockList(listId, stockArray);
-}
 
-// Load stock data when the page loads
-window.onload = function () {
-    updateStockList('system-stock-list', systemStock);
-    updateStockList('furniture-stock-list', furnitureStock);
-};
+
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the modal
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = document.querySelector('.close');
+
+    // Get all images with class 'modal-trigger'
+    const images = document.querySelectorAll('.modal-trigger');
+
+    // Loop through all images and add click event
+    images.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+        });
+    });
+
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // Close the modal when clicking outside the image
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
