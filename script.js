@@ -62,3 +62,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// Function to set the progress circle
+function setProgressCircle() {
+    const progressCircles = document.querySelectorAll('.progress-circle');
+    progressCircles.forEach(circle => {
+        const percent = circle.getAttribute('data-percent');
+        const offset = 100 - percent;
+        circle.style.background = `conic-gradient(#00ffff ${percent}%, #ff00ff ${offset}%)`;
+    });
+}
+
+// Call the function when the page loads
+window.onload = setProgressCircle;
+
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+
+    fetch('send_email.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data); // Tampilkan pesan sukses atau gagal
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
