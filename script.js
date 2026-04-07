@@ -1,96 +1,83 @@
-// script.js
-
-// Add an event listener to the "Download CV" button
-document.getElementById('downloadCV').addEventListener('click', function() {
-    alert('Downloading CV...'); // Replace this with actual download functionality
-    // You can add logic to trigger a file download here
-});
-
-
-
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelectorAll('.nav-link');
 
 document.addEventListener('DOMContentLoaded', function() {
-    const workExperienceBtn = document.getElementById('workExperienceBtn');
-    const projectBtn = document.getElementById('projectBtn');
-    const workExperienceContent = document.getElementById('workExperienceContent');
-    const projectContent = document.getElementById('projectContent');
-
-    workExperienceBtn.addEventListener('click', function() {
-        workExperienceContent.style.display = 'block';
-        projectContent.style.display = 'none';
-        workExperienceBtn.classList.add('active');
-        projectBtn.classList.remove('active');
-    });
-
-    projectBtn.addEventListener('click', function() {
-        workExperienceContent.style.display = 'none';
-        projectContent.style.display = 'block';
-        projectBtn.classList.add('active');
-        workExperienceBtn.classList.remove('active');
-    });
+    initializeApp();
 });
 
+function initializeApp() {
+  setupSmoothScrolling();
+  setupNavbarScroll();
+}
+
+function setupEventListeners() {
+  tabButtons.forEach(button => {
+    button.addEventListener('click', handleTabSwitch);
+  });
+    
+  hamburger.addEventListener('click', toggleMobileMenu);
+    
+  navLinks.forEach(link => {
+    link.addEventListener('click', handleNavLinkClick);
+  });
+}
 
 
-// script.js
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the modal
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-    const closeBtn = document.querySelector('.close');
-
-    // Get all images with class 'modal-trigger'
-    const images = document.querySelectorAll('.modal-trigger');
-
-    // Loop through all images and add click event
-    images.forEach(img => {
-        img.addEventListener('click', function() {
-            modal.style.display = 'block';
-            modalImg.src = this.src;
+function setupSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
-    });
-
-    // Close the modal when the close button is clicked
-    closeBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
-
-    // Close the modal when clicking outside the image
-    window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
-
-
-// Function to set the progress circle
-function setProgressCircle() {
-    const progressCircles = document.querySelectorAll('.progress-circle');
-    progressCircles.forEach(circle => {
-        const percent = circle.getAttribute('data-percent');
-        const offset = 100 - percent;
-        circle.style.background = `conic-gradient(#00ffff ${percent}%, #ff00ff ${offset}%)`;
     });
 }
 
-// Call the function when the page loads
-window.onload = setProgressCircle;
-
-
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const formData = new FormData(this);
-
-    fetch('send_email.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert(data); // Tampilkan pesan sukses atau gagal
-    })
-    .catch(error => {
-        console.error('Error:', error);
+function setupNavbarScroll() {
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scroll down
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scroll up
+            navbar.style.transform = 'translateY(0)';
+        }
+        
+        // Add background when scrolled
+        if (scrollTop > 50) {
+            navbar.style.background = 'rgba(44, 62, 80, 0.95)';
+            navbar.style.backdropFilter = 'blur(10px)';
+        } else {
+            navbar.style.background = 'linear-gradient(135deg, var(--primary-color), #34495e)';
+            navbar.style.backdropFilter = 'none';
+        }
+        
+        lastScrollTop = scrollTop;
     });
-});
+}
+
+function handleNavLinkClick() {
+    // Close mobile menu when a link is clicked
+    navMenu.classList.remove('active');
+    hamburger.classList.remove('active');
+    
+    // Update active state
+    navLinks.forEach(link => link.classList.remove('active'));
+    this.classList.add('active');
+}
+
+function toggleMobileMenu() {
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}
