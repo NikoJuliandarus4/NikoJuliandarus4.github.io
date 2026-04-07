@@ -211,6 +211,149 @@ body {
     opacity: 0.8;
 }
 
+/* About Section */
+.about-section {
+    padding: 80px 0;
+    background: var(--light-color);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.header-line {
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 1rem auto 0;
+}
+
+/* Highlight Cards */
+.about-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.highlight-card {
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    min-width: 180px;
+    transition: var(--transition);
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.highlight-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(184, 39, 20, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.highlight-icon i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.highlight-card h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.highlight-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Deskripsi */
+.about-description {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.about-description p {
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Visi Misi */
+.visi-misi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.visi-card, .misi-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.visi-card h3, .misi-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.visi-card h3 i, .misi-card h3 i {
+    margin-right: 10px;
+}
+
+.visi-card p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.misi-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.misi-card li {
+    color: var(--text-color);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.misi-card li::before {
+    content: "✓";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -240,4 +383,22 @@ body {
         flex-direction: column;  /* di HP jadi vertikal */
         align-items: center;
     }
+    
+    .about-section {
+        padding: 50px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .visi-misi {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlight-card {
+        min-width: 150px;
+        padding: 1.5rem;
+    }
+}
 }
