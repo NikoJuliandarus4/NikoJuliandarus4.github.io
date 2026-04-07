@@ -109,7 +109,7 @@ body {
 .hero {
     background: linear-gradient(135deg, var(--primary-color), #34495e);
     color: white;
-    padding: 120px 0 80px;
+    padding: 100px 0 100px;
     margin-top: 70px;
 }
 
