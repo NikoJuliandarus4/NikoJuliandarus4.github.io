@@ -1,214 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niko Juliandarus - Network Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NJGroup - Manajemen Stok Konstruksi & Furniture</title>
+  <meta name="description" content="NJGroup - Sebuah perusahaan penyedia layanan manpower / subcon disebuah pameran.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Outer Box -->
-    <div class="outer-box">
-        <!-- Navbar -->
-        <nav>
-            <div class="nav-left">
-                <span>Portfolio</span>
-            </div>
-            <div class="nav-right">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#skill">Skils</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-
-        <!-- Home Section -->
-        <section id="home">
-            <div class="home-container">
-                <div class="home-left">
-                    <h1>Niko Juliandarus</h1>
-                    <h2>Network Engineer Enthusiast</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.</p>
-                    <a href="Niko-CV.pdf" donwload="Niko-CV.pdf">
-                      <button id="downloadCV">Download CV</button>
-                    </a>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/niko-juliandarus-6048132a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="fab fa-linkedin"></a>
-                        <a href="https://github.com/NikoJuliandarus4" class="fab fa-github"></a>
-                        <a href="https://www.instagram.com/nikojuliandarus/profilecard/?igsh=MXZuOWxldjI4MHdxMw==" class="fab fa-instagram"></a>
-                    </div>
-                </div>
-                <div class="home-right">
-                    <img src="home.png" alt="Profile Image">
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about">
-          <div class="about-container">
-        <div class="about-right">
-            <img src="profil.jpg" alt="About Image">
-        </div>
-        <div class="about-left">
-            <h1>About</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nunc, nec aliquam nisl nunc nec nisl. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nunc, nec aliquam nisl nunc nec nisl.</p>
-        </div>
-    </div>
-</section>
-
-
-        <!-- Portfolio Section -->
-        <section id="portfolio">
-    <div class="portfolio-container">
-        <div class="portfolio-buttons">
-            <button id="workExperienceBtn" class="active">Work Experience</button>
-            <button id="projectBtn">Project</button>
-        </div>
-        <div id="workExperienceContent" class="portfolio-content">
-            <h1>Work Experience</h1>
-            <ul>
-                <li>
-                    <h3>Network Engineer at Company A</h3>
-                    <p><strong>Duration:</strong> Jan 2022 - Present</p>
-                    <p><strong>Description:</strong> Managed network infrastructure, implemented security protocols, and optimized network performance.</p>
-                </li>
-                <li>
-                    <h3>IT Support Specialist at Company B</h3>
-                    <p><strong>Duration:</strong> Jun 2019 - Dec 2021</p>
-                    <p><strong>Description:</strong> Provided technical support, resolved network issues, and maintained hardware and software systems.</p>
-                </li>
-                <li>
-                    <h3>Junior Network Administrator at Company C</h3>
-                    <p><strong>Duration:</strong> Jan 2018 - May 2019</p>
-                    <p><strong>Description:</strong> Assisted in network administration tasks, monitored network performance, and troubleshooted connectivity issues.</p>
-                </li>
-            </ul>
-        </div>
-        <div id="projectContent" class="portfolio-content" style="display: none;">
-            <h1>Project</h1>
-            <ul>
-                <li>
-                    <div class="project-item">
-                        <div class="project-text">
-                            <h3>Network Optimization Project</h3>
-                            <p><strong>Duration:</strong> Mar 2023 - Aug 2023</p>
-                            <p><strong>Description:</strong> Designed and implemented a network optimization solution that improved performance by 30%.</p>
-                        </div>
-                        <div class="project-image">
-                            <img src="pwinbox.jpg" alt="Network Optimization Project" class="modal-trigger">
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-item">
-                        <div class="project-text">
-                            <h3>Security Enhancement Project</h3>
-                            <p><strong>Duration:</strong> Sep 2022 - Feb 2023</p>
-                            <p><strong>Description:</strong> Developed and deployed a new security framework to protect against cyber threats.</p>
-                        </div>
-                        <div class="project-image">
-                            <img src="pcisco.jpg" alt="Security Enhancement Project" class="modal-trigger">
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-item">
-                        <div class="project-text">
-                            <h3>Cloud Migration Project</h3>
-                            <p><strong>Duration:</strong> Jan 2021 - Jun 2021</p>
-                            <p><strong>Description:</strong> Led the migration of on-premise infrastructure to a cloud-based solution, reducing costs by 20%.</p>
-                        </div>
-                        <div class="project-image">
-                            <img src="project3.jpg" alt="Cloud Migration Project" class="modal-trigger">
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- Modal -->
-<div id="imageModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImage">
-</div>
-
-<!-- Skill Section -->
-<section id="skill">
-    <div class="skill-container">
-        <h1>Skills</h1>
-        <div class="skill-grid">
-            <!-- HTML Skill -->
-            <div class="skill-item">
-                <div class="skill-logo">
-                    <img src="html-logo.png" alt="HTML Logo">
-                </div>
-                <div class="skill-progress">
-                    <div class="progress-circle" data-percent="90">
-                        <span>90%</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CSS Skill -->
-            <div class="skill-item">
-                <div class="skill-logo">
-                    <img src="css-logo.png" alt="CSS Logo">
-                </div>
-                <div class="skill-progress">
-                    <div class="progress-circle" data-percent="85">
-                        <span>85%</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- JavaScript Skill -->
-            <div class="skill-item">
-                <div class="skill-logo">
-                    <img src="js-logo.png" alt="JavaScript Logo">
-                </div>
-                <div class="skill-progress">
-                    <div class="progress-circle" data-percent="80">
-                        <span>80%</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Add more skills as needed -->
-        </div>
-    </div>
-</section>
-
-
-<!-- Contact Section -->
-<section id="contact">
-    <div class="contact-container">
-        <h1>Contact Me</h1>
-        <form id="contactForm" action="send_email.php" method="POST">
-            <div class="form-group">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="sender">Your Email:</label>
-                <input type="email" id="sender" name="sender" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
-</section>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-content">
+      <div class="nav-logo">
         
-      
-
-    <script src="script.js"></script>
+        <div class="logo-icon">
+          <i class="fas fa-building"></i>
+        </div>
+        <span class="logo-text">NJ Group</span>
+        
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#home" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#service" class="nav-link">Service</a>
+        </li>
+        <li class="nav-item">
+          <a href="#portofolio" class="nav-link">Portofolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </div>
 </body>
-</html>
