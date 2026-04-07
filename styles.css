@@ -183,7 +183,7 @@ body {
 }
 
 .hero-stats {
-    display: flex-direction;
+    display: flex;
     justify-content: center;
     gap: 4rem;
     margin-top: 2.5rem;
