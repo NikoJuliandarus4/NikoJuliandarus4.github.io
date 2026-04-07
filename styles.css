@@ -107,7 +107,10 @@ body {
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), #34495e);
+    background: linear-gradient(rgba(0,0,0,7), rgba(0,0,0,7) url('NJG1.jpg'));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     padding: 100px 0 100px;
     margin-top: 70px;
