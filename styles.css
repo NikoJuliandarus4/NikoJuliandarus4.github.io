@@ -36,8 +36,7 @@ body {
   background-color: var(--white);
   box-shadow: var(--shadow);
   position: sticky;
-  padding: 1rem 0;
-  width: 100%;
+  padding: 1rem 2 rem;
   top: 0;
   z-index: 1000;
 }
@@ -45,7 +44,6 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,10 +53,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--secondary-color);
-    background: rgba(184, 39, 20, 0.1);
-    font-size: 1.5rem;
-    transition: var(--transition);
+    cursor: pointer;
 }
 
 .nav-logo i {
