@@ -31,6 +31,12 @@ body {
   background-color: var(--light-color);
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* Navbar Styles */
 .navbar {
     background: linear-gradient(135deg, var(--primary-color), #34495e);
