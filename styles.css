@@ -185,7 +185,7 @@ body {
 .hero-stats {
     display: flex-direction;
     justify-content: center;
-    gap: 3rem;
+    gap: 4rem;
     margin-top: 2.5rem;
     padding-top: 1.5rem;
     border-top: 1px solid rgba(255,255,255,0.2);
@@ -208,14 +208,6 @@ body {
     opacity: 0.8;
 }
 
-@media (max-width: 768px) {
-    .hero-stats {
-        gap: 1.5rem;
-    }
-    .stat-number {
-        font-size: 1.4rem;
-    }
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -239,3 +231,10 @@ body {
     .nav-menu.active {
         left: 0;
     }
+    
+    .hero-stats {
+        gap: 1.5rem;
+        flex-direction: column;  /* di HP jadi vertikal */
+        align-items: center;
+    }
+}
