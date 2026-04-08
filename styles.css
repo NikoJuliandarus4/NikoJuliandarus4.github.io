@@ -6,21 +6,22 @@
 
 /* ========== ROOT WARNA ========== */
 :root {
-    --primary-light: #ff7e3a;      /* Chakra ekor terang */
-    --primary-color: #ff6b35;       /* Chakra ekor utama */
-    --primary-dark: #e85d2a;        /* Chakra ekor gelap */
-    --primary-darker: #c44a1e;      /* Chakra ekor lebih gelap */
-    --secondary-color: #1a0f0a;     /* Background gelap baryon */
-    --accent-color: #f7931e;        /* Chakra emas */
-    --light-color: #fff0e6;         /* Sorotan chakra */
-    --dark-color: #0d0805;          /* Hitam pekat */
-    --text-color: #ffe6cc;          /* Teks putih chakra */
-    --text-light: #ffccaa;          /* Teks chakra terang */
-    --border-color: #ff6b35;
-    --shadow: 0 4px 6px rgba(255, 107, 53, 0.3);
+    --primary-light: #e74c3c;      /* Chakra merah terang (elegan) */
+    --primary-color: #c0392b;       /* Chakra merah utama */
+    --primary-dark: #962d22;        /* Chakra merah gelap */
+    --primary-darker: #7b241c;      /* Chakra lebih gelap */
+    --secondary-color: #1a1a2e;     /* Dark baryon (premium) */
+    --accent-color: #d4af37;        /* Emas baryon (elegan) */
+    --light-color: #f5f6fa;         /* Putih bersih */
+    --dark-color: #0f0f1a;          /* Hitam pekat */
+    --text-color: #2d3436;          /* Abu tua untuk teks */
+    --text-light: #636e72;          /* Abu medium */
+    --text-white: #ffffff;          /* Putih untuk dark bg */
+    --border-color: #e0e0e0;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 20px 40px rgba(192, 57, 43, 0.15);
     --transition: all 0.3s ease;
     --white: #ffffff;
-    --bg-glow: radial-gradient(circle at 30% 10%, rgba(255, 107, 53, 0.15), transparent);
 }
 
 html {
@@ -29,7 +30,7 @@ html {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0d0805 0%, #1a0f0a 100%);
+    background-color: var(--light-color);
     color: var(--text-color);
 }
 
@@ -41,14 +42,19 @@ body {
 
 /* ========== NAVBAR STYLES ========== */
 .navbar {
-    background: linear-gradient(135deg, #1a0f0a 0%, #0d0805 100%);
-    border-bottom: 2px solid var(--primary-color);
+    background: var(--white);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.2);
+    box-shadow: var(--shadow);
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.navbar:hover {
+    border-bottom-color: var(--primary-color);
 }
 
 .nav-container {
@@ -67,14 +73,13 @@ body {
     color: var(--primary-color);
     font-size: 1.5rem;
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
 }
 
 .logo-icon {
     background: var(--primary-color);
     padding: 8px;
     border-radius: 8px;
-    color: #1a0f0a;
+    color: white;
 }
 
 .nav-menu {
@@ -88,7 +93,7 @@ body {
 }
 
 .nav-link {
-    color: var(--text-light);
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
@@ -98,9 +103,8 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    background: rgba(255, 107, 53, 0.2);
-    color: var(--primary-light);
-    text-shadow: 0 0 5px rgba(255, 107, 53, 0.5);
+    color: var(--primary-color);
+    background: rgba(192, 57, 43, 0.05);
 }
 
 /* Hamburger Menu */
@@ -113,31 +117,29 @@ body {
 .bar {
     width: 25px;
     height: 3px;
-    background: var(--primary-light);
+    background: var(--text-color);
     margin: 3px 0;
     transition: var(--transition);
 }
 
 /* ========== HERO SECTION ========== */
 .hero {
-    background: linear-gradient(rgba(13, 8, 5, 0.85), rgba(26, 15, 10, 0.9)), url('NJG1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    padding: 100px 0 100px;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--dark-color) 100%);
+    color: var(--text-white);
+    padding: 120px 0 100px;
     margin-top: 70px;
     position: relative;
+    overflow: hidden;
 }
 
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 40%, rgba(255, 107, 53, 0.15), transparent);
+    top: -50%;
+    right: -30%;
+    width: 80%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(192, 57, 43, 0.08) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -158,19 +160,20 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
-    background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+    color: var(--text-white);
+}
+
+.hero-title span {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
 }
 
 .hero-subtitle {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.85;
     line-height: 1.6;
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .hero-buttons {
@@ -180,7 +183,7 @@ body {
 }
 
 .cta-button {
-    padding: 12px 24px;
+    padding: 12px 28px;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
@@ -193,25 +196,26 @@ body {
 }
 
 .cta-button.primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    color: #1a0f0a;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(192, 57, 43, 0.3);
 }
 
 .cta-button.primary:hover {
+    background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
-    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+    box-shadow: 0 8px 25px rgba(192, 57, 43, 0.4);
 }
 
 .cta-button.secondary {
     background: transparent;
-    color: var(--primary-light);
-    border: 2px solid var(--primary-color);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .cta-button.secondary:hover {
-    background: rgba(255, 107, 53, 0.15);
+    border-color: var(--primary-color);
+    background: rgba(192, 57, 43, 0.1);
     transform: translateY(-2px);
 }
 
@@ -222,9 +226,8 @@ body {
 }
 
 .visual-item {
-    font-size: 8rem;
-    color: rgba(255, 107, 53, 0.2);
-    filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.3));
+    font-size: 7rem;
+    color: rgba(255, 255, 255, 0.08);
 }
 
 /* Hero Stats */
@@ -234,7 +237,7 @@ body {
     gap: 3rem;
     margin-top: 2.5rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 107, 53, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     flex-wrap: wrap;
 }
 
@@ -247,34 +250,19 @@ body {
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
-    background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--primary-color);
 }
 
 .stat-label {
     font-size: 0.85rem;
-    opacity: 0.8;
-    color: var(--text-light);
+    opacity: 0.7;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* ========== ABOUT SECTION ========== */
 .about-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, #0d0805 0%, #1a0f0a 100%);
-    color: white;
-    position: relative;
-}
-
-.about-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    background: var(--white);
 }
 
 .section-header {
@@ -284,11 +272,12 @@ body {
 
 .section-header h2 {
     font-size: 2.5rem;
-    background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--text-color);
     margin-bottom: 0.5rem;
+}
+
+.section-header h2 span {
+    color: var(--primary-color);
 }
 
 .section-header p {
@@ -299,7 +288,7 @@ body {
 .header-line {
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    background: var(--primary-color);
     margin: 1rem auto 0;
     border-radius: 3px;
 }
@@ -314,27 +303,26 @@ body {
 }
 
 .highlight-card {
-    background: rgba(255, 107, 53, 0.08);
-    backdrop-filter: blur(10px);
+    background: var(--white);
     padding: 2rem;
     text-align: center;
     border-radius: 12px;
     min-width: 180px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 107, 53, 0.2);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
 }
 
 .highlight-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 107, 53, 0.15);
     border-color: var(--primary-color);
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
+    box-shadow: var(--shadow-hover);
 }
 
 .highlight-icon {
     width: 70px;
     height: 70px;
-    background: rgba(255, 107, 53, 0.15);
+    background: rgba(192, 57, 43, 0.08);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -344,15 +332,12 @@ body {
 
 .highlight-icon i {
     font-size: 2rem;
-    color: var(--primary-light);
+    color: var(--primary-color);
 }
 
 .highlight-card h3 {
     font-size: 1.5rem;
-    background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
@@ -369,7 +354,7 @@ body {
 }
 
 .about-description p {
-    color: var(--text-light);
+    color: var(--text-color);
     line-height: 1.8;
     margin-bottom: 1rem;
 }
@@ -384,25 +369,23 @@ body {
 
 .visi-card,
 .misi-card {
-    background: rgba(255, 107, 53, 0.05);
-    backdrop-filter: blur(10px);
+    background: var(--white);
     padding: 2rem;
     border-radius: 12px;
     border-left: 4px solid var(--primary-color);
-    transition: all 0.3s ease;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
 }
 
 .visi-card:hover,
 .misi-card:hover {
-    background: rgba(255, 107, 53, 0.1);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 }
 
 .visi-card h3,
 .misi-card h3 {
-    background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--primary-color);
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -410,11 +393,10 @@ body {
 .visi-card h3 i,
 .misi-card h3 i {
     margin-right: 10px;
-    color: var(--primary-color);
 }
 
 .visi-card p {
-    color: var(--text-light);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
@@ -424,15 +406,15 @@ body {
 }
 
 .misi-card li {
-    color: var(--text-light);
+    color: var(--text-color);
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
 }
 
 .misi-card li::before {
-    content: "✦";
-    color: var(--primary-light);
+    content: "✓";
+    color: var(--primary-color);
     position: absolute;
     left: 0;
     font-weight: bold;
@@ -452,6 +434,10 @@ body {
     .hero-buttons {
         justify-content: center;
     }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -464,14 +450,13 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: linear-gradient(135deg, #1a0f0a 0%, #0d0805 100%);
+        background: var(--white);
         width: 100%;
         text-align: center;
         transition: 0.3s ease;
         padding: 2rem 0;
-        box-shadow: 0 4px 20px rgba(255, 107, 53, 0.2);
+        box-shadow: var(--shadow);
         gap: 0;
-        border-top: 1px solid var(--primary-color);
     }
 
     .nav-menu.active {
@@ -500,12 +485,11 @@ body {
     }
 
     .hero {
-        padding: 80px 0 60px;
-        margin-top: 60px;
+        padding: 90px 0 60px;
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-subtitle {
@@ -565,7 +549,7 @@ body {
     }
 
     .hero-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .highlight-card {
