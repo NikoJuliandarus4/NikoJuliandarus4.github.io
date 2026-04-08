@@ -4,22 +4,20 @@
     box-sizing: border-box;
 }
 
-/* ========== ROOT WARNA MERAH BATA + NARUTO BARYON ========== */
+/* ========== ROOT WARNA ORIGINAL ========== */
 :root {
-    --primary-light: #d43f2a;      /* Merah bata terang */
-    --primary-color: #b82714;       /* Merah bata utama */
-    --primary-dark: #8a1d0e;        /* Merah bata gelap */
-    --primary-darker: #5c1309;      /* Merah bata lebih gelap */
-    --secondary-color: #1a1a2e;     /* Dark premium (baryon) */
-    --accent-color: #d4af37;        /* Emas baryon (elegan) */
-    --light-color: #f8f9fa;         /* Putih bersih */
-    --dark-color: #0f0f1a;          /* Hitam pekat */
-    --text-color: #2d3436;          /* Abu tua untuk teks */
-    --text-light: #636e72;          /* Abu medium */
-    --text-white: #ffffff;          /* Putih untuk dark bg */
-    --border-color: #e0e0e0;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    --shadow-hover: 0 20px 40px rgba(184, 39, 20, 0.15);
+    --primary-light: #d43f2a;
+    --primary-color: #b82714;
+    --primary-dark: #8a1d0e;
+    --primary-darker: #5c1309;
+    --secondary-color: #2c3e50;
+    --accent-color: #f39c12;
+    --light-color: #f8f9fa;
+    --dark-color: #1a1a2e;
+    --text-color: #333;
+    --text-light: #6c757d;
+    --border-color: #dee2e6;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
     --white: #ffffff;
 }
@@ -42,14 +40,13 @@ body {
 
 /* ========== NAVBAR STYLES ========== */
 .navbar {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    background: linear-gradient(135deg, var(--primary-color), #34495e);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: var(--shadow);
-    border-bottom: 2px solid var(--accent-color);
 }
 
 .nav-container {
@@ -97,8 +94,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    background: rgba(255, 255, 255, 0.15);
-    border-bottom: 2px solid var(--accent-color);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Hamburger Menu */
@@ -116,27 +112,15 @@ body {
     transition: var(--transition);
 }
 
-/* ========== HERO SECTION (GAMBAR TETAP ADA) ========== */
+/* ========== HERO SECTION ========== */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('NJG1.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('NJG1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
     padding: 120px 0 100px;
     margin-top: 70px;
-    position: relative;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 40%, rgba(184, 39, 20, 0.15), transparent);
-    pointer-events: none;
 }
 
 .hero-container {
@@ -147,8 +131,6 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
-    position: relative;
-    z-index: 1;
 }
 
 .hero-title {
@@ -156,12 +138,6 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
-    color: white;
-}
-
-.hero-title span {
-    color: var(--accent-color);
-    border-bottom: 2px solid var(--primary-color);
 }
 
 .hero-subtitle {
@@ -169,7 +145,6 @@ body {
     margin-bottom: 2rem;
     opacity: 0.9;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-buttons {
@@ -192,26 +167,24 @@ body {
 }
 
 .cta-button.primary {
-    background: var(--primary-color);
+    background: var(--secondary-color);
     color: white;
-    box-shadow: 0 4px 15px rgba(184, 39, 20, 0.3);
 }
 
 .cta-button.primary:hover {
-    background: var(--primary-dark);
+    background: var(--primary-color);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(184, 39, 20, 0.4);
 }
 
 .cta-button.secondary {
     background: transparent;
     color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid white;
 }
 
 .cta-button.secondary:hover {
-    border-color: var(--primary-color);
-    background: rgba(184, 39, 20, 0.15);
+    background: white;
+    color: var(--primary-color);
     transform: translateY(-2px);
 }
 
@@ -233,7 +206,7 @@ body {
     gap: 3rem;
     margin-top: 2.5rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     flex-wrap: wrap;
 }
 
@@ -246,20 +219,18 @@ body {
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
-    color: var(--primary-color);
 }
 
 .stat-label {
     font-size: 0.85rem;
     opacity: 0.8;
-    color: rgba(255, 255, 255, 0.8);
 }
 
 /* ========== ABOUT SECTION ========== */
 .about-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--dark-color) 100%);
-    color: var(--text-white);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
 }
 
 .section-header {
@@ -269,12 +240,8 @@ body {
 
 .section-header h2 {
     font-size: 2.5rem;
-    color: var(--text-white);
-    margin-bottom: 0.5rem;
-}
-
-.section-header h2 span {
     color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
 
 .section-header p {
@@ -285,9 +252,8 @@ body {
 .header-line {
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    background: var(--primary-color);
     margin: 1rem auto 0;
-    border-radius: 3px;
 }
 
 /* Highlight Cards */
@@ -377,7 +343,6 @@ body {
 .visi-card:hover,
 .misi-card:hover {
     background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-3px);
 }
 
 .visi-card h3,
@@ -447,7 +412,7 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        background: linear-gradient(135deg, var(--primary-color), #34495e);
         width: 100%;
         text-align: center;
         transition: 0.3s ease;
