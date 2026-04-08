@@ -6,17 +6,17 @@
 
 /* ========== ROOT WARNA ========== */
 :root {
-    --primary-light: #e74c3c;      /* Chakra merah terang (elegan) */
-    --primary-color: #c0392b;       /* Chakra merah utama */
-    --primary-dark: #962d22;        /* Chakra merah gelap */
-    --primary-darker: #7b241c;      /* Chakra lebih gelap */
-    --secondary-color: #1a1a2e;     /* Dark baryon (premium) */
-    --accent-color: #d4af37;        /* Emas baryon (elegan) */
-    --light-color: #f5f6fa;         /* Putih bersih */
-    --dark-color: #0f0f1a;          /* Hitam pekat */
-    --text-color: #2d3436;          /* Abu tua untuk teks */
-    --text-light: #636e72;          /* Abu medium */
-    --text-white: #ffffff;          /* Putih untuk dark bg */
+    --primary-light: #e74c3c;
+    --primary-color: #c0392b;
+    --primary-dark: #962d22;
+    --primary-darker: #7b241c;
+    --secondary-color: #1a1a2e;
+    --accent-color: #d4af37;
+    --light-color: #f5f6fa;
+    --dark-color: #0f0f1a;
+    --text-color: #2d3436;
+    --text-light: #636e72;
+    --text-white: #ffffff;
     --border-color: #e0e0e0;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     --shadow-hover: 0 20px 40px rgba(192, 57, 43, 0.15);
