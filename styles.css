@@ -42,7 +42,7 @@ body {
 .navbar {
     background: linear-gradient(135deg, var(--primary-color), #34495e);
     padding: 1rem 0;
-    position: ;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
