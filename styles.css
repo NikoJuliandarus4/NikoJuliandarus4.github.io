@@ -668,6 +668,210 @@ body {
     margin-top: 1rem;
 }
 
+/* ========== PORTFOLIO SECTION ========== */
+.portfolio-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+/* Filter Buttons */
+.portfolio-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 24px;
+    background: transparent;
+    border: 2px solid var(--border-color);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.portfolio-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    background: var(--white);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.05);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(184, 39, 20, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+    padding: 1rem;
+}
+
+.overlay-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.overlay-content p {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.view-btn {
+    background: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 25px;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.view-btn:hover {
+    background: var(--primary-dark);
+    color: white;
+}
+
+.portfolio-caption {
+    padding: 1rem;
+    text-align: center;
+}
+
+.portfolio-caption h4 {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.portfolio-caption p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Portfolio CTA */
+.portfolio-cta {
+    text-align: center;
+    padding: 2rem;
+    background: var(--light-color);
+    border-radius: 16px;
+}
+
+.portfolio-cta p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    cursor: pointer;
+}
+
+.lightbox-content {
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-lightbox:hover {
+    color: var(--primary-color);
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
 /* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 992px) {
     .hero-container {
@@ -694,8 +898,10 @@ body {
     .service-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+     .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
-
 
 @media (max-width: 768px) {
     .hamburger {
@@ -812,6 +1018,23 @@ body {
     
     .cta-content h3 {
         font-size: 1.4rem;
+    }
+    
+      .portfolio-section {
+        padding: 50px 0;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-filter {
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        padding: 6px 16px;
+        font-size: 0.8rem;
     }
 }
 
