@@ -289,6 +289,84 @@
         </div>
     </div>
 </section>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Portfolio <span>Kami</span></h2>
+            <p>Berbagai proyek pameran yang telah kami kerjakan untuk klien terpercaya</p>
+            <div class="header-line"></div>
+        </div>
+
+        <!-- Filter Kategori -->
+        <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all">Semua Proyek</button>
+            <button class="filter-btn" data-filter="process">Proses Pembangunan</button>
+            <button class="filter-btn" data-filter="result">Hasil Booth</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid" id="portfolioGrid">
+            <!-- Masukkan foto-foto Anda di sini -->
+            <!-- Contoh struktur item portfolio -->
+            
+            <div class="portfolio-item" data-category="process">
+                <div class="portfolio-image">
+                    <img src="foto/proses1.jpg" alt="Proses Pembangunan Booth">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h4>Pembangunan Booth</h4>
+                            <p>Event XYZ 2024 - Jakarta</p>
+                            <button class="view-btn" data-img="foto/proses1.jpg">
+                                <i class="fas fa-search-plus"></i> Lihat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-caption">
+                    <h4>Proses Erection Booth</h4>
+                    <p>Event International Expo 2024</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="result">
+                <div class="portfolio-image">
+                    <img src="foto/hasil1.jpg" alt="Hasil Booth Jadi">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <h4>Booth Selesai</h4>
+                            <p>Event XYZ 2024 - Jakarta</p>
+                            <button class="view-btn" data-img="foto/hasil1.jpg">
+                                <i class="fas fa-search-plus"></i> Lihat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-caption">
+                    <h4>Hasil Booth Premium</h4>
+                    <p>Event International Expo 2024</p>
+                </div>
+            </div>
+
+            <!-- Tambahkan lebih banyak item sesuai foto Anda -->
+        </div>
+
+        <!-- CTA Portfolio -->
+        <div class="portfolio-cta">
+            <p>Ingin melihat lebih banyak proyek kami?</p>
+            <button class="cta-button primary" id="contactPortfolioBtn">
+                <i class="fas fa-download"></i> Unduh Portfolio Lengkap
+            </button>
+        </div>
+    </div>
+</section>
+
+  <!-- Lightbox Modal (untuk perbesar gambar) -->
+  <div id="lightboxModal" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-content" id="lightboxImg">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
   
   
     <script src="script.js"></script>
