@@ -1,374 +1,675 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NJGroup - Subcon Indonesia</title>
-  <meta name="description" content="NJGroup - Sebuah perusahaan penyedia layanan manpower / subcon disebuah pameran.">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Andri Saputra | Exhibition Portfolio</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
 </head>
+
+
 <body>
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">
-        
-        <div class="logo-icon">
-          <i class="fas fa-building"></i>
+
+
+    <!-- =================================================
+         NAVBAR
+    ================================================== -->
+
+    <header class="navbar" id="navbar">
+
+        <a
+            href="#home"
+            class="logo"
+        >
+            AS<span>.</span>
+        </a>
+
+
+        <nav class="nav-menu">
+
+            <a
+                href="#home"
+                class="active"
+            >
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#experience">
+                Experience
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#gallery">
+                Gallery
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-toggle"
+            aria-label="Open navigation menu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =================================================
+         HOME
+    ================================================== -->
+
+    <section
+        id="home"
+        class="hero"
+    >
+
+        <div class="hero-background">
+
+            <img
+                src="assets/images/home1.jpg"
+                class="hero-slide active"
+                alt=""
+            >
+
+            <img
+                src="assets/images/home2.jpg"
+                class="hero-slide"
+                alt=""
+            >
+
+            <img
+                src="assets/images/home3.jpg"
+                class="hero-slide"
+                alt=""
+            >
+
         </div>
-        <span class="logo-text">NJ Group</span>
-        
-      </div>
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="#home" class="nav-link active">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#about" class="nav-link">About</a>
-        </li>
-        <li class="nav-item">
-          <a href="#service" class="nav-link">Service</a>
-        </li>
-        <li class="nav-item">
-          <a href="#portofolio" class="nav-link">Portofolio</a>
-        </li>
-        <li class="nav-item">
-          <a href="#contact" class="nav-link">Contact</a>
-        </li>
-      </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </div>
-  </div>
-  <section id="home" class="hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <h1 class="hero-title">We Build Your Exhibition Success. From Setup to Strike.</h1>
-          <p class="hero-subtitle">NJGroup adalah mitra subkon terpercaya untuk industri pameran. Kami menyediakan tenaga ahli yang terlatih, terkoordinasi, dan siap bekerja dalam tekanan waktu. Bukan sekadar tukang — tapi tim eksekusi yang mengerti standar penyelenggara, keselamatan kerja, dan kepuasan desainer Anda.</p>
-          <div class="hero-buttons">
-            <button class="cta-button primary" id="viewStockBtn">
-              <i class="fas fa-boxes"></i> Lihat Layanan
-            </button>
-            <button class="cta-button secondary" id="contactBtn">
-              <i class="fas fa-phone"></i> Hubungi Kami
-            </button>
-          </div>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-number">50+</span>
-              <span class="stat-label">Event Sukses</span>
+
+
+        <div class="hero-overlay"></div>
+
+
+        <div class="hero-content">
+
+            <p class="hero-label">
+                PERSONAL PORTFOLIO
+            </p>
+
+
+            <h1>
+                Andri Saputra
+            </h1>
+
+
+            <div class="hero-role">
+
+                <span id="typing-role"></span>
+
+                <span class="cursor">
+                    |
+                </span>
+
             </div>
-            <div class="stat-item">
-              <span class="stat-number">100+</span>
-              <span class="stat-label">Tenaga Terlatih</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">24/7</span>
-              <span class="stat-label">Siap Kerja</span>
-            </div>
-          </div>
+
+
+            <p class="hero-description">
+                Event & Exhibition Project Management
+            </p>
+
+
+            <a
+                href="#experience"
+                class="hero-button"
+            >
+
+                <span>
+                    Explore My Work
+                </span>
+
+                <span>
+                    ↓
+                </span>
+
+            </a>
+
         </div>
-        <div class="hero-visual">
-          <div class="visual-item">
-            <i class="fas fa-warehouse"></i>
-          </div>
+
+
+        <div class="hero-bottom">
+
+            <span>
+                Scroll to explore
+            </span>
+
+            <span>
+                2026
+            </span>
+
         </div>
-      </div>
+
+
+        <div class="slide-counter">
+
+            <span id="current-slide">
+                01
+            </span>
+
+            <span class="counter-line"></span>
+
+            <span>
+                03
+            </span>
+
+        </div>
+
+
+        <div class="slide-progress">
+
+            <div
+                class="slide-progress-bar"
+                id="slide-progress-bar"
+            ></div>
+
+        </div>
+
     </section>
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Tentang NJGroup</h2>
-        <p>Mitra Terpercaya untuk Kesuksesan Pameran Anda</p>
-        <div class="header-line"></div>
-      </div>
 
-      <!-- Highlight Cards -->
-      <div class="about-highlights">
-        <div class="highlight-card">
-          <div class="highlight-icon">
-            <i class="fas fa-trophy"></i>
-          </div>
-          <h3>10+ Tahun</h3>
-          <p>Pengalaman di Industri Pameran</p>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-icon">
-            <i class="fas fa-users"></i>
-          </div>
-          <h3>100+ Tenaga</h3>
-          <p>Ahli & Tersertifikasi</p>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-icon">
-            <i class="fas fa-clock"></i>
-          </div>
-          <h3>24/7 Ready</h3>
-          <p>Siap Kerja Kapan Saja</p>
-        </div>
-      </div>
 
-      <!-- Deskripsi Perusahaan -->
-      <div class="about-description">
-        <p>NJGroup didirikan untuk menjawab kebutuhan tenaga profesional di industri pameran. Kami memahami bahwa setiap event memiliki tantangan unik, mulai dari setup awal hingga strike akhir.</p>
-        <p>Dengan tim yang terlatih dan terkoordinasi, kami memastikan stand pameran Anda berdiri kokoh, rapi, dan tepat waktu. Bukan sekadar tukang – tapi tim eksekusi yang mengerti standar penyelenggara dan keselamatan kerja.</p>
-      </div>
 
-      <!-- Visi & Misi -->
-      <div class="visi-misi">
-        <div class="visi-card">
-          <h3><i class="fas fa-eye"></i> Visi</h3>
-          <p>Menjadi mitra subkon terdepan di industri pameran Indonesia yang dikenal akan keandalan dan profesionalisme.</p>
-        </div>
-        <div class="misi-card">
-          <h3><i class="fas fa-bullseye"></i> Misi</h3>
-          <ul>
-            <li>Menyediakan tenaga terlatih yang siap bekerja dalam tekanan waktu</li>
-            <li>Menjaga komitmen ketepatan waktu dalam setiap proyek</li>
-            <li>Mengedepankan keselamatan kerja di setiap pelaksanaan</li>
-            <li>Memberikan solusi manpower yang fleksibel sesuai kebutuhan klien</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Service Section -->
-  <section id="service" class="service-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Layanan <span>Kami</span></h2>
-        <p>Solusi tenaga profesional untuk kebutuhan pameran dan produksi Anda</p>
-        <div class="header-line"></div>
-      </div>
+    <!-- =================================================
+         ABOUT
+    ================================================== -->
 
-      <!-- Why Choose Us (Pertama - Menarik Klien) -->
-      <div class="why-choose-us">
-        <div class="why-header">
-          <h3>Kenapa Klien Mempercayai Kami?</h3>
-          <p>Lebih dari 50+ event sukses bersama berbagai brand ternama</p>
-        </div>
-          <div class="why-grid">
-            <div class="why-item">
-              <div class="why-icon"><i class="fas fa-clock"></i></div>
-              <div class="why-content">
-                <h4>Tepat Waktu 99%</h4>
-                <p>Komitmen kami: deadline adalah harga mati</p>
-              </div>
+    <section
+        id="about"
+        class="about-section"
+    >
+
+        <div class="about-container">
+
+
+            <!-- FOTO -->
+
+            <div class="about-photo">
+
+                <div class="photo-frame">
+
+                    <div class="profile-placeholder" aria-label="Andri Saputra">
+                        <span>AS</span>
+                        <small>EXHIBITION PROFESSIONAL</small>
+                    </div>
+
+                </div>
+
             </div>
-            <div class="why-item">
-              <div class="why-icon"><i class="fas fa-user-check"></i></div>
-              <div class="why-content">
-                <h4>Tenaga Tersertifikasi</h4>
-                <p>Setiap tim melalui pelatihan standar industri</p>
-              </div>
-            </div>
-            <div class="why-item">
-              <div class="why-icon"><i class="fas fa-headset"></i></div>
-              <div class="why-content">
-                <h4>Support 24/7</h4>
-                <p>Tim kami siap membantu kapan pun Anda butuh</p>
-              </div>
-            </div>
-            <div class="why-item">
-              <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
-              <div class="why-content">
-                <h4>Garansi Kepuasan</h4>
-                <p>Kualitas kerja kami jamin sesuai standar</p>
-              </div>
-            </div>
-          </div>
-      </div>
 
-      <!-- Layanan Utama -->
-      <div class="service-grid">
-        <!-- Layanan 1 -->
-        <div class="service-card">
-          <div class="service-badge">POPULER</div>
-          <div class="service-icon">
-            <i class="fas fa-chalkboard-user"></i>
-          </div>
-          <h3>Manpower Pameran</h3>
-          <p>Tenaga ahli untuk pembangunan stand, instalasi, operasional, hingga pembongkaran.</p>
-          <ul class="service-list">
-          <li><i class="fas fa-check"></i> Setup & Erection</li>
-          <li><i class="fas fa-check"></i> Operasional Event</li>
-          <li><i class="fas fa-check"></i> Strike & Dismantle</li>
-          <li><i class="fas fa-check"></i> Supervisi Lapangan</li>
-        </ul>
-        <div class="service-footer">
-          <span class="price-tag">Mulai dari</span>
-          <span class="price-range">Sesuai skala event</span>
-          <button class="btn-outline service-quote" data-service="Manpower Pameran">
-            <i class="fas fa-calculator"></i> Minta Penawaran
-          </button>
-        </div>
-      </div>
 
-      <!-- Layanan 2 -->
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fas fa-warehouse"></i>
-        </div>
-        <h3>Produksi Gudang</h3>
-        <p>Tenaga produksi untuk membantu pengerjaan di gudang klien sesuai kebutuhan.</p>
-        <ul class="service-list">
-          <li><i class="fas fa-check"></i> Perakitan Komponen</li>
-          <li><i class="fas fa-check"></i> Packing & Labeling</li>
-          <li><i class="fas fa-check"></i> Quality Control</li>
-          <li><i class="fas fa-check"></i> Logistik Gudang</li>
-        </ul>
-        <div class="service-footer">
-          <span class="price-tag">Sistem</span>
-          <span class="price-range">Harian / Mingguan / Borongan</span>
-          <button class="btn-outline service-quote" data-service="Produksi Gudang">
-            <i class="fas fa-calculator"></i> Minta Penawaran
-          </button>
-        </div>
-      </div>
 
-      <!-- Layanan 3 -->
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fas fa-gear"></i>
-        </div>
-        <h3>Solusi Kustom</h3>
-        <p>Butuh tenaga dengan keahlian khusus? Kami siap menyesuaikan dengan kebutuhan Anda.</p>
-          <ul class="service-list">
-            <li><i class="fas fa-check"></i> Tenaga Tersertifikasi</li>
-              <li><i class="fas fa-check"></i> Fleksibel Jadwal</li>
-              <li><i class="fas fa-check"></i> 24/7 Emergency</li>
-              <li><i class="fas fa-check"></i> Seluruh Indonesia</li>
-            </ul>
-            <div class="service-footer">
-              <span class="price-tag">Konsultasi</span>
-              <span class="price-range">Gratis untuk proyek pertama</span>
-              <button class="btn-outline service-quote" data-service="Solusi Kustom">
-                <i class="fas fa-calculator"></i> Minta Penawaran
-              </button>
-            </div>
-          </div>
-        </div>
+            <!-- TEXT -->
 
-        <!-- Testimonial / Social Proof -->
-        <div class="testimonial-preview">
-          <div class="testimonial-icon">
-            <i class="fas fa-quote-left"></i>
-          </div>
-            <p class="testimonial-text">"Tim NJGroup sangat profesional. Stand pameran kami selesai tepat waktu dengan kualitas sempurna. Mulai dari setup sampai strike, semua terkoordinasi dengan baik."</p>
-          <div class="testimonial-author">
-            <strong>Project Manager</strong>
-            <span>Event Organizer Terkemuka Jakarta</span>
-          </div>
-        </div>
+            <div class="about-content">
 
-        <!-- CTA Utama (Paling Menarik) -->
-        <div class="service-cta">
-          <div class="cta-content">
-            <h3>Siap Membuat Event Anda Sukses?</h3>
-            <p>Konsultasikan kebutuhan Anda dengan tim kami secara gratis</p>
-            <div class="cta-benefits">
-              <span><i class="fas fa-check-circle"></i> Respon < 2 jam</span>
-              <span><i class="fas fa-check-circle"></i> Konsultasi gratis</span>
-              <span><i class="fas fa-check-circle"></i> Quote tanpa ribet</span>
+                <p class="section-label">
+                    ABOUT ME
+                </p>
+
+
+                <h2>
+                    Turning exhibition concepts into well-executed projects.
+                </h2>
+
+
+                <p class="about-text">
+
+                    I am Andri Saputra, a Computer Engineering and Networking graduate with over 2 years of experience in warehouse operations and event coordination within the exhibition industry. I am experienced in handling the flow of exhibition materials, from receiving and storage to dispatch for event needs.
+
+                </p>
+
+
+                <p class="about-text">
+
+                    I am accustomed to working across teams and coordinating with clients, vendors, and event organizers to keep projects running smoothly and on schedule. My work focuses on project coordination, production supervision, quality control, and delivering results that meet client requirements.
+
+                </p>
+
+
+
+                <!-- QUICK INFORMATION -->
+
+                <div class="about-info">
+
+
+                    <div class="info-item">
+
+                        <span class="info-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Exhibition
+                            </strong>
+
+                            <small>
+                                Project Management
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Production
+                            </strong>
+
+                            <small>
+                                Site Supervision
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Coordination
+                            </strong>
+
+                            <small>
+                                Client & Vendor
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
             </div>
-            <div class="cta-buttons">
-              <button class="cta-button primary" id="mainContactBtn">
-                <i class="fas fa-headset"></i> Hubungi Kami Sekarang
-              </button>
-              <button class="cta-button secondary" id="whatsappBtn">
-                <i class="fab fa-whatsapp"></i> Chat via WhatsApp
-              </button>
-            </div>
-            <p class="cta-note">*Tim kami akan menghubungi Anda dalam waktu kurang dari 2 jam</p>
-            </div>
-        </div>
-    </div>
-</section>
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio-section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Portfolio <span>Kami</span></h2>
-            <p>Berbagai proyek pameran yang telah kami kerjakan untuk klien terpercaya</p>
-            <div class="header-line"></div>
+
         </div>
 
-        <!-- Filter Kategori -->
-        <div class="portfolio-filter">
-            <button class="filter-btn active" data-filter="all">Semua Proyek</button>
-            <button class="filter-btn" data-filter="process">Proses Pembangunan</button>
-            <button class="filter-btn" data-filter="result">Hasil Booth</button>
-        </div>
+    </section>
 
-        <!-- Portfolio Grid -->
-        <div class="portfolio-grid" id="portfolioGrid">
-            <!-- Masukkan foto-foto Anda di sini -->
-            <!-- Contoh struktur item portfolio -->
-            
-            <div class="portfolio-item" data-category="process">
-                <div class="portfolio-image">
-                    <img src="foto/proses1.jpg" alt="Proses Pembangunan Booth">
-                    <div class="portfolio-overlay">
-                        <div class="overlay-content">
-                            <h4>Pembangunan Booth</h4>
-                            <p>Event XYZ 2024 - Jakarta</p>
-                            <button class="view-btn" data-img="foto/proses1.jpg">
-                                <i class="fas fa-search-plus"></i> Lihat
-                            </button>
+
+
+    <!-- =================================================
+         FUTURE SECTIONS
+    ================================================== -->
+
+    <!-- =================================================
+         EXPERIENCE
+    ================================================== -->
+
+    <section
+        id="experience"
+        class="experience-section"
+    >
+
+        <div class="experience-container">
+
+            <div class="experience-heading">
+                <p class="section-label">EXPERIENCE</p>
+                <h2>More than 5 years of experience across exhibition projects, project support, and operations.</h2>
+            </div>
+
+            <div class="experience-list">
+
+                <article class="experience-card">
+                    <div class="experience-number">01</div>
+                    <div class="experience-content">
+                        <div class="experience-top">
+                            <div>
+                                <h3>Exhibition Project Executive</h3>
+                                <p class="experience-company">Maximaindo Exhibition Contractor</p>
+                            </div>
+                            <span class="experience-date">Nov 2025 — Present</span>
+                        </div>
+
+                        <p class="experience-summary">
+                            Handle exhibition projects from planning through on-site execution, including reviewing 3D booth designs, preparing quotations, coordinating booth production, and supervising field execution.
+                        </p>
+
+                        <div class="experience-details">
+                            <span>Project Coordination</span>
+                            <span>3D Design Review</span>
+                            <span>Quotation</span>
+                            <span>Booth Production</span>
+                            <span>Site Supervision</span>
+                            <span>Quality Control</span>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-caption">
-                    <h4>Proses Erection Booth</h4>
-                    <p>Event International Expo 2024</p>
-                </div>
-            </div>
+                </article>
 
-            <div class="portfolio-item" data-category="result">
-                <div class="portfolio-image">
-                    <img src="foto/hasil1.jpg" alt="Hasil Booth Jadi">
-                    <div class="portfolio-overlay">
-                        <div class="overlay-content">
-                            <h4>Booth Selesai</h4>
-                            <p>Event XYZ 2024 - Jakarta</p>
-                            <button class="view-btn" data-img="foto/hasil1.jpg">
-                                <i class="fas fa-search-plus"></i> Lihat
-                            </button>
+                <article class="experience-card">
+                    <div class="experience-number">02</div>
+                    <div class="experience-content">
+                        <div class="experience-top">
+                            <div>
+                                <h3>Event PIC</h3>
+                                <p class="experience-company">Maximaindo Exhibition Contractor</p>
+                            </div>
+                            <span class="experience-date">Jan 2023 — Present</span>
+                        </div>
+
+                        <p class="experience-summary">
+                            Support exhibition and event projects through project supervision, client-vendor coordination, booth production support, 3D booth interpretation, and quotation preparation.
+                        </p>
+
+                        <div class="experience-details">
+                            <span>Project Support</span>
+                            <span>Client Coordination</span>
+                            <span>Vendor Coordination</span>
+                            <span>3D Interpretation</span>
+                            <span>Quotation</span>
+                            <span>Site Support</span>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-caption">
-                    <h4>Hasil Booth Premium</h4>
-                    <p>Event International Expo 2024</p>
-                </div>
+                </article>
+
+            </div>
+                <article class="experience-card">
+                    <div class="experience-number">03</div>
+                    <div class="experience-content">
+                        <div class="experience-top">
+                            <div>
+                                <h3>Kepala Bagian Mero – Divisi Operasional</h3>
+                                <p class="experience-company">PT City Neon Prima Mandiri</p>
+                            </div>
+                            <span class="experience-date">Oct 2015 — Jan 2021</span>
+                        </div>
+
+                        <p class="experience-summary">
+                            Operational leadership experience within the exhibition business, with responsibility connected to team coordination and project operations.
+                        </p>
+
+                        <div class="experience-details">
+                            <span>Operations</span>
+                            <span>Team Coordination</span>
+                            <span>Project Support</span>
+                            <span>On-site Operations</span>
+                        </div>
+                    </div>
+                </article>
+
+        </div>
+    </section>
+
+
+   <!-- =================================================
+         PROJECTS
+    ================================================== -->
+
+    <section
+        id="projects"
+        class="projects-section"
+    >
+
+        <div class="projects-container">
+
+            <div class="projects-heading">
+                <p class="section-label">PROJECTS</p>
+                <h2>Selected exhibition projects and professional work.</h2>
+                <p class="projects-intro">
+                    Selected work from exhibition projects, production coordination, and on-site execution.
+                </p>
             </div>
 
-            <!-- Tambahkan lebih banyak item sesuai foto Anda -->
-        </div>
+            <div class="projects-grid">
 
-        <!-- CTA Portfolio -->
-        <div class="portfolio-cta">
-            <p>Ingin melihat lebih banyak proyek kami?</p>
-            <button class="cta-button primary" id="contactPortfolioBtn">
-                <i class="fas fa-download"></i> Unduh Portfolio Lengkap
-            </button>
-        </div>
-    </div>
-</section>
+                <article class="project-card">
+                    <div class="project-visual">
+                        <span>01</span>
+                        <p>PROJECT IMAGE</p>
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <p class="project-type">EXHIBITION PROJECT</p>
+                            <h3>Exhibition Project 01</h3>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </article>
 
-  <!-- Lightbox Modal (untuk perbesar gambar) -->
-  <div id="lightboxModal" class="lightbox">
-    <span class="close-lightbox">&times;</span>
-    <img class="lightbox-content" id="lightboxImg">
-    <div class="lightbox-caption" id="lightboxCaption"></div>
-</div>
-  
-  
-    <script src="script.js"></script>
-  
+                <article class="project-card">
+                    <div class="project-visual">
+                      <span>PROJECT IMAGE</span><p>ADD PHOTO</p>
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <p class="project-type">EXHIBITION PROJECT</p>
+                            <h3>Exhibition Project 02</h3>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual">
+                      <span>PROJECT IMAGE</span><p>ADD PHOTO</p>
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <p class="project-type">EXHIBITION PROJECT</p>
+                            <h3>Exhibition Project 03</h3>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual">
+                        <span>01</span>
+                        <p>PROJECT IMAGE</p>
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <p class="project-type">EXHIBITION PROJECT</p>
+                            <h3>Exhibition Project 04</h3>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual">
+                        <span>01</span>
+                        <p>PROJECT IMAGE</p>
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <p class="project-type">EXHIBITION PROJECT</p>
+                            <h3>Exhibition Project 05</h3>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual">
+                        <span>01</span>
+                        <p>PROJECT IMAGE</p>
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <p class="project-type">EXHIBITION PROJECT</p>
+                            <h3>Exhibition Project 06</h3>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual">
+                      <span>PROJECT IMAGE</span><p>ADD PHOTO</p>
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <p class="project-type">EXHIBITION PROJECT</p>
+                            <h3>Exhibition Project 07</h3>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual">
+                      <span>PROJECT IMAGE</span><p>ADD PHOTO</p>
+                    </div>
+                    <div class="project-info">
+                        <div>
+                            <p class="project-type">EXHIBITION PROJECT</p>
+                            <h3>Exhibition Project 08</h3>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =================================================
+         GALLERY
+    ================================================== -->
+
+    <section
+        id="gallery"
+        class="gallery-section"
+    >
+
+        <div class="gallery-container">
+
+            <div class="gallery-heading">
+                <p class="section-label">GALLERY</p>
+                <h2>Selected moments from exhibition work.</h2>
+                <p class="gallery-intro">
+                    A visual collection of exhibition projects, production, and on-site work.
+                </p>
+            </div>
+
+            <div class="gallery-masonry">
+                <div class="gallery-item gallery-placeholder gallery-tall">
+                  <span>01</span><p>ADD PHOTO</p>
+                </div>
+                <div class="gallery-item gallery-placeholder"><span>02</span><p>ADD PHOTO</p></div>
+                <div class="gallery-item gallery-placeholder gallery-wide"><span>03</span><p>ADD PHOTO</p></div>
+                <div class="gallery-item gallery-placeholder"><span>04</span><p>ADD PHOTO</p></div>
+                <div class="gallery-item gallery-placeholder gallery-tall"><span>05</span><p>ADD PHOTO</p></div>
+                <div class="gallery-item gallery-placeholder"><span>06</span><p>ADD PHOTO</p></div>
+                <div class="gallery-item gallery-placeholder"><span>07</span><p>ADD PHOTO</p></div>
+                <div class="gallery-item gallery-placeholder gallery-tall"><span>08</span><p>ADD PHOTO</p></div>
+                <div class="gallery-item gallery-placeholder"><span>09</span><p>ADD PHOTO</p></div>
+                <div class="gallery-item gallery-placeholder gallery-wide"><span>10</span><p>ADD PHOTO</p></div>
+            </div>
+
+        </div>
+    </section>
+
+  <!-- Contact -->
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-heading">
+                <div class="section-label">CONTACT</div>
+                <h2>Let's connect.</h2>
+                <p>Available for professional collaboration, exhibition projects, and industry opportunities.</p>
+            </div>
+
+            <div class="contact-links">
+
+                <div class="contact-card">
+                    <span class="contact-type">PROFESSIONAL FOCUS</span>
+                    <span class="contact-value">Event & Exhibition</span>
+                    <span class="contact-arrow">↗</span>
+                </div>
+
+                <div class="contact-card">
+                    <span class="contact-type">PROJECT ROLE</span>
+                    <span class="contact-value">Project Coordination</span>
+                    <span class="contact-arrow">↗</span>
+                </div>
+
+                <div class="contact-card">
+                    <span class="contact-type">WORK MODE</span>
+                    <span class="contact-value">On-site & Project Based</span>
+                    <span class="contact-arrow">↗</span>
+                </div>
+
+                <div class="contact-card">
+                    <span class="contact-type">LOCATION</span>
+                    <span class="contact-value">Jakarta & Beyond</span>
+                    <span class="contact-arrow">↗</span>
+                </div>
+
+            </div>
+
+            <a class="contact-cta" href="#contact">
+                <span>CONNECT WITH ANDRI</span>
+                <span>↗</span>
+            </a>
+
+            <div class="contact-footer">
+                <span>© 2026 Andri Saputra</span>
+                <span>Event · Exhibition · Operations</span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js/script.js"></script>
+
 </body>
+
+</html>
