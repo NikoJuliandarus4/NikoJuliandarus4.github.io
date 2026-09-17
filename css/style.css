@@ -1593,8 +1593,6 @@ button {
     justify-content: space-between;
     gap: 20px;
     padding: 22px 2px 0;
-}
-
 .project-type {
     margin: 0 0 9px;
     font-size: 8px;
@@ -1667,616 +1665,300 @@ button {
     }
 }
 
-/* =====================================================
-   GALLERY — MASONRY
-===================================================== */
-.gallery-section { min-height:auto; padding:120px 7vw 140px; background:#0a0a0a; }
-.gallery-container { max-width:1280px; margin:0 auto; }
-.gallery-heading { max-width:760px; margin-bottom:70px; }
-.gallery-heading h2 { margin:0 0 24px; font-size:clamp(34px,4.5vw,64px); line-height:1.08; font-weight:400; letter-spacing:-2px; }
-.gallery-intro { max-width:650px; margin:0; color:rgba(255,255,255,.52); font-size:13px; line-height:1.8; }
-.gallery-masonry { column-count:3; column-gap:22px; }
-.gallery-item { break-inside:avoid; margin-bottom:22px; width:100%; }
-.gallery-placeholder { position:relative; min-height:260px; display:flex; align-items:center; justify-content:center; overflow:hidden; border:1px solid rgba(255,255,255,.10); background:linear-gradient(135deg,rgba(255,255,255,.07),transparent 45%),#111; transition:transform .35s ease,border-color .35s ease; }
-.gallery-placeholder::after { content:""; position:absolute; inset:12px; border:1px solid rgba(255,255,255,.05); pointer-events:none; }
-.gallery-placeholder span { position:absolute; top:18px; left:18px; font-size:10px; letter-spacing:2px; color:rgba(255,255,255,.42); }
-.gallery-placeholder p { margin:0; font-size:9px; letter-spacing:3px; color:rgba(255,255,255,.25); }
-.gallery-tall { min-height:380px; }
-.gallery-wide { min-height:300px; }
-.gallery-placeholder:hover { transform:translateY(-5px); border-color:rgba(255,255,255,.28); }
-.gallery-item img { width:100%; height:auto; display:block; }
-@media (max-width:900px) { .gallery-masonry { column-count:2; } }
-@media (max-width:600px) { .gallery-section { padding:90px 7vw 100px; } .gallery-heading { margin-bottom:48px; } .gallery-heading h2 { font-size:clamp(31px,9vw,42px); letter-spacing:-1.2px; } .gallery-intro { font-size:12px; line-height:1.75; } .gallery-masonry { column-count:1; } .gallery-item,.gallery-tall,.gallery-wide { min-height:280px; margin-bottom:18px; } }
-
-/* Contact */
-.contact-section { min-height:auto; padding:120px 7vw 45px; background:#050505; border-top:1px solid rgba(255,255,255,.08); }
-.contact-container { max-width:1280px; margin:0 auto; }
-.contact-heading { max-width:760px; margin-bottom:64px; }
-.contact-heading h2 { margin:0 0 22px; font-size:clamp(42px,6vw,78px); line-height:1; font-weight:400; letter-spacing:-3px; }
-.contact-heading p { max-width:600px; margin:0; color:rgba(255,255,255,.52); font-size:14px; line-height:1.8; }
-.contact-links { display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid rgba(255,255,255,.12); border-left:1px solid rgba(255,255,255,.12); }
-.contact-card { position:relative; min-height:145px; padding:28px 30px; display:flex; flex-direction:column; justify-content:space-between; border-right:1px solid rgba(255,255,255,.12); border-bottom:1px solid rgba(255,255,255,.12); color:#fff; text-decoration:none; transition:background .3s ease, transform .3s ease; }
-.contact-card:hover { background:rgba(255,255,255,.045); transform:translateY(-3px); }
-.contact-type { font-size:9px; letter-spacing:2.5px; color:rgba(255,255,255,.4); }
-.contact-value { margin-top:28px; padding-right:30px; font-size:17px; letter-spacing:-.2px; }
-.contact-arrow { position:absolute; right:28px; bottom:25px; font-size:18px; color:rgba(255,255,255,.5); transition:transform .3s ease,color .3s ease; }
-.contact-card:hover .contact-arrow { color:#fff; transform:translate(3px,-3px); }
-.contact-cta { margin-top:26px; min-height:96px; padding:0 30px; display:flex; align-items:center; justify-content:space-between; border:1px solid rgba(255,255,255,.14); color:#fff; text-decoration:none; font-size:12px; letter-spacing:2.5px; transition:background .3s ease,border-color .3s ease; }
-.contact-cta:hover { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.3); }
-.contact-cta span:last-child { font-size:22px; letter-spacing:0; }
-.contact-footer { margin-top:80px; padding-top:20px; display:flex; justify-content:space-between; gap:20px; border-top:1px solid rgba(255,255,255,.08); color:rgba(255,255,255,.3); font-size:9px; letter-spacing:1.5px; text-transform:uppercase; }
-@media (max-width:700px) { .contact-section { padding:90px 7vw 35px; } .contact-heading { margin-bottom:46px; } .contact-heading h2 { font-size:clamp(38px,11vw,52px); letter-spacing:-2px; } .contact-heading p { font-size:12px; } .contact-links { grid-template-columns:1fr; } .contact-card { min-height:125px; padding:24px; } .contact-value { margin-top:22px; font-size:15px; } .contact-arrow { right:23px; bottom:22px; } .contact-cta { min-height:82px; padding:0 24px; font-size:10px; } .contact-footer { margin-top:60px; flex-direction:column; gap:10px; font-size:8px; } }
-
-:root {
-    --red: #D9282F;
-    --red-dark: #A9151B;
-    --black: #111111;
-    --black-soft: #171717;
-    --warm-white: #F8F7F5;
-    --gray: #E5E5E5;
-}
-
-/* Global red identity */
-body {
-    background: var(--black);
-}
-
-.logo span,
-.hero-role,
-.section-label,
-.experience-number,
-.project-type {
-    color: var(--red) !important;
-}
-
-/* Navbar */
-.nav-menu a.active,
-.nav-menu a:hover {
-    color: #fff;
-}
-
-.nav-menu a::after,
-.nav-menu a.active::after {
-    background: var(--red);
-}
-
-.navbar.scrolled {
-    background: rgba(17,17,17,.88);
-    border-bottom-color: rgba(217,40,47,.28);
-}
-
-/* Hero */
-.hero-overlay {
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.76),
-            rgba(0,0,0,.38),
-            rgba(0,0,0,.70)
-        );
-}
-
-.hero-button {
-    border-color: rgba(217,40,47,.75);
-}
-
-.hero-button:hover {
-    border-color: var(--red);
-}
-
-.hero-bottom span:last-child {
-    color: var(--red);
-}
-
-.slide-progress-bar {
-    background: var(--red);
-}
-
-.counter-line {
-    background: var(--red);
-}
-
-/* About */
-.about-section {
-    background: var(--warm-white);
-    color: var(--black);
-}
-
-.about-content h2 {
-    color: var(--black);
-}
-
-.about-text {
-    color: rgba(17,17,17,.64);
-}
-
-.section-label {
-    color: var(--red) !important;
-}
-
-.about-info {
-    border-top-color: rgba(17,17,17,.14);
-}
-
-.info-number {
-    color: var(--red);
-}
-
-.info-item strong {
-    color: var(--black);
-}
-
-.info-item small {
-    color: rgba(17,17,17,.52);
-}
-
-.photo-frame {
-    background: var(--black);
-    border: 1px solid rgba(217,40,47,.28);
-}
-
-.photo-frame::before {
-    border-color: rgba(217,40,47,.55);
-}
-
-.profile-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background:
-        radial-gradient(circle at 70% 25%, rgba(217,40,47,.22), transparent 30%),
-        linear-gradient(145deg, #171717, #0c0c0c);
-    color: #fff;
-}
-
-.profile-placeholder span {
-    font-size: clamp(70px, 10vw, 120px);
-    font-weight: 500;
-    letter-spacing: -5px;
-}
-
-.profile-placeholder small {
-    margin-top: 12px;
-    color: rgba(255,255,255,.5);
-    font-size: 8px;
-    letter-spacing: 3px;
-}
-
-/* Experience */
-.experience-section {
-    background: var(--black);
-}
-
-.experience-heading h2,
-.experience-content h3 {
-    color: #fff;
-}
-
-.experience-list {
-    border-top-color: rgba(217,40,47,.28);
-}
-
-.experience-card {
-    border-bottom-color: rgba(255,255,255,.10);
-}
-
-.experience-number {
-    color: var(--red) !important;
-}
-
-.experience-details span {
-    border-color: rgba(217,40,47,.28);
-}
-
-.experience-details span:hover {
-    border-color: var(--red);
-    color: #fff;
-}
-
-/* Projects */
-.projects-section {
-    background: var(--warm-white);
-    color: var(--black);
-}
-
-.projects-heading h2,
-.project-info h3 {
-    color: var(--black);
-}
-
-.projects-intro {
-    color: rgba(17,17,17,.58);
-}
-
-.project-visual {
-    background:
-        linear-gradient(135deg, rgba(217,40,47,.12), transparent 48%),
-        #ededeb;
-    border: 1px solid rgba(17,17,17,.10);
-}
-
-.project-visual::after {
-    border-color: rgba(217,40,47,.20);
-}
-
-.project-visual span {
-    color: var(--red);
-}
-
-.project-visual p {
-    color: rgba(17,17,17,.35);
-}
-
-.project-card:hover .project-visual {
-    border-color: rgba(217,40,47,.65);
-}
-
-.project-type {
-    color: var(--red) !important;
-}
-
-.project-arrow {
-    color: var(--red);
-    border-color: rgba(217,40,47,.28);
-}
-
-.project-card:hover .project-arrow {
-    color: var(--red);
-    border-color: var(--red);
-}
-
 /* Gallery */
 .gallery-section {
-    background: var(--black);
+    padding: 120px 7vw 110px;
+    background: #050505;
 }
 
-.gallery-placeholder {
-    background:
-        linear-gradient(135deg, rgba(217,40,47,.14), transparent 45%),
-        #171717;
-    border-color: rgba(217,40,47,.20);
+.gallery-container {
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
-.gallery-placeholder::after {
-    border-color: rgba(217,40,47,.18);
+.gallery-heading {
+    max-width: 760px;
+    margin-bottom: 60px;
 }
 
-.gallery-placeholder span {
-    color: var(--red);
+.gallery-heading h2 {
+    margin: 0 0 22px;
+    font-size: clamp(42px, 6vw, 78px);
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -3px;
 }
 
-.gallery-placeholder:hover {
-    border-color: rgba(217,40,47,.70);
+.gallery-intro {
+    max-width: 600px;
+    margin: 0;
+    color: rgba(255,255,255,.52);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* True Masonry */
+.gallery-masonry {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    width: 100%;
+}
+
+.gallery-column {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.gallery-item {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform .45s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.025);
+}
+
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .gallery-section {
+        padding: 90px 7vw 80px;
+    }
+
+    .gallery-masonry {
+        gap: 16px;
+    }
+
+    .gallery-column {
+        gap: 16px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .gallery-section {
+        padding: 80px 7vw 65px;
+    }
+
+    .gallery-heading {
+        margin-bottom: 42px;
+    }
+
+    .gallery-heading h2 {
+        font-size: clamp(38px, 11vw, 52px);
+        letter-spacing: -2px;
+    }
+
+    .gallery-intro {
+        font-size: 12px;
+    }
+
+    .gallery-masonry {
+        display: block;
+    }
+
+    .gallery-column {
+        display: flex;
+        width: 100%;
+        gap: 14px;
+        margin-bottom: 14px;
+    }
+
+    .gallery-column + .gallery-column {
+        display: none;
+    }
 }
 
 /* Contact */
 .contact-section {
-    background: #0b0b0b;
-    border-top-color: rgba(217,40,47,.28);
+    min-height: auto;
+    padding: 120px 7vw 45px;
+    background: #050505;
+    border-top: 1px solid rgba(255,255,255,.08);
 }
 
-.contact-card:hover,
-.contact-cta:hover {
-    background: rgba(217,40,47,.08);
+.contact-container {
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
-.contact-card,
-.contact-cta {
-    border-color: rgba(217,40,47,.22);
+.contact-heading {
+    max-width: 760px;
+    margin-bottom: 64px;
+}
+
+.contact-heading h2 {
+    margin: 0 0 22px;
+    font-size: clamp(42px,6vw,78px);
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -3px;
+}
+
+.contact-heading p {
+    max-width: 600px;
+    margin: 0;
+    color: rgba(255,255,255,.52);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.contact-links {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-top: 1px solid rgba(255,255,255,.12);
+    border-left: 1px solid rgba(255,255,255,.12);
+}
+
+.contact-card {
+    position: relative;
+    min-height: 145px;
+    padding: 28px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid rgba(255,255,255,.12);
+    border-bottom: 1px solid rgba(255,255,255,.12);
+    color: #fff;
+    text-decoration: none;
+    transition: background .3s ease, transform .3s ease;
+}
+
+.contact-card:hover {
+    background: rgba(255,255,255,.045);
+    transform: translateY(-3px);
+}
+
+.contact-type {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    color: rgba(255,255,255,.4);
+}
+
+.contact-value {
+    margin-top: 28px;
+    padding-right: 30px;
+    font-size: 17px;
+    letter-spacing: -.2px;
 }
 
 .contact-arrow {
-    color: var(--red);
-}
-
-.contact-card:hover .contact-arrow {
-    color: var(--red);
-}
-
-.contact-cta {
-    border-color: var(--red);
-}
-
-.contact-cta:hover {
-    background: var(--red);
-    border-color: var(--red);
-}
-
-/* Mobile menu */
-.menu-toggle span {
-    background: #fff;
-}
-
-@media (max-width: 700px) {
-    .profile-placeholder span {
-        font-size: 70px;
-    }
-}
-
-/* Experience project photo */
-.experience-project-image {
-    margin-top: 24px;
-    width: min(100%, 520px);
-    overflow: hidden;
-    border-radius: 14px;
-    background: #f0f0f0;
-    aspect-ratio: 16 / 9;
-}
-
-.experience-project-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-@media (max-width: 700px) {
-    .experience-project-image {
-        width: 100%;
-        margin-top: 18px;
-    }
-}
-
-/* =====================================================
-   ANDRI SAPUTRA — STRONGER RED VISUAL THEME v3
-   Red is now the dominant brand color while black,
-   cream and grey are kept as supporting colors.
-===================================================== */
-:root {
-    --red: #D9282F;
-    --red-bright: #EF3E45;
-    --red-dark: #9F141A;
-    --red-deep: #751015;
-    --black: #111111;
-    --black-soft: #1B1B1B;
-    --warm-white: #FAF8F5;
-    --gray: #E7E4E1;
-}
-
-/* Main page: warm neutral instead of an all-black base */
-body {
-    background: var(--warm-white);
-}
-
-/* Navbar becomes a clear red brand bar */
-.navbar {
-    background: var(--red);
-    color: #fff;
-}
-
-.navbar.scrolled {
-    background: rgba(159,20,26,.96);
-    border-bottom-color: rgba(255,255,255,.18);
-}
-
-.nav-menu a,
-.nav-menu a:hover,
-.nav-menu a.active {
-    color: #fff;
-}
-
-.nav-menu a::after,
-.nav-menu a.active::after {
-    background: #fff;
-}
-
-.menu-toggle span {
-    background: #fff;
-}
-
-/* Hero: red becomes visible in the composition, not only as tiny accents */
-.hero-overlay {
-    background:
-        linear-gradient(90deg,
-            rgba(117,16,21,.90) 0%,
-            rgba(159,20,26,.48) 42%,
-            rgba(0,0,0,.56) 100%);
-}
-
-.hero-role,
-.hero-bottom span:last-child {
-    color: var(--red-bright) !important;
-}
-
-.hero-button {
-    background: var(--red);
-    border-color: var(--red);
-    color: #fff;
-}
-
-.hero-button:hover {
-    background: #fff;
-    border-color: #fff;
-    color: var(--red-dark);
-}
-
-.slide-progress-bar,
-.counter-line {
-    background: var(--red-bright);
-}
-
-/* About stays light so the red sections have breathing room */
-.about-section {
-    background: var(--warm-white);
-}
-
-.about-content h2 {
-    color: var(--black);
-}
-
-.photo-frame {
-    background: var(--red-dark);
-    border-color: var(--red);
-}
-
-.photo-frame::before {
-    border-color: rgba(217,40,47,.65);
-}
-
-.profile-placeholder {
-    background:
-        radial-gradient(circle at 70% 25%, rgba(239,62,69,.42), transparent 32%),
-        linear-gradient(145deg, var(--red-dark), var(--red-deep));
-}
-
-/* Experience: strong red panel */
-.experience-section {
-    background: var(--red);
-    color: #fff;
-}
-
-.experience-heading h2,
-.experience-content h3 {
-    color: #fff;
-}
-
-.experience-list {
-    border-top-color: rgba(255,255,255,.38);
-}
-
-.experience-card {
-    border-bottom-color: rgba(255,255,255,.24);
-}
-
-.experience-number {
-    color: #fff !important;
-}
-
-.experience-company,
-.experience-date,
-.experience-summary {
-    color: rgba(255,255,255,.82);
-}
-
-.experience-details span {
-    color: #fff;
-    border-color: rgba(255,255,255,.42);
-}
-
-.experience-details span:hover {
-    background: #fff;
-    border-color: #fff;
-    color: var(--red-dark);
-}
-
-.experience-project-image {
-    border: 3px solid rgba(255,255,255,.55);
-    background: var(--red-dark);
-}
-
-/* Projects: light background with red framing */
-.projects-section {
-    background: var(--warm-white);
-}
-
-.projects-heading h2,
-.project-info h3 {
-    color: var(--black);
-}
-
-.project-visual {
-    background:
-        linear-gradient(135deg, rgba(217,40,47,.20), transparent 52%),
-        #eeeae7;
-    border: 1px solid rgba(217,40,47,.30);
-}
-
-.project-visual::after {
-    border-color: rgba(217,40,47,.35);
-}
-
-.project-visual span,
-.project-type,
-.project-arrow {
-    color: var(--red) !important;
-}
-
-.project-card:hover .project-visual {
-    border-color: var(--red);
-}
-
-.project-arrow {
-    border-color: rgba(217,40,47,.42);
-}
-
-.project-card:hover .project-arrow {
-    color: #fff !important;
-    background: var(--red);
-    border-color: var(--red);
-}
-
-/* Gallery: deep red instead of black */
-.gallery-section {
-    background:
-        linear-gradient(135deg, var(--red-dark), var(--red-deep));
-}
-
-.gallery-placeholder {
-    background:
-        linear-gradient(135deg, rgba(255,255,255,.12), transparent 45%),
-        rgba(0,0,0,.16);
-    border-color: rgba(255,255,255,.25);
-}
-
-.gallery-placeholder::after {
-    border-color: rgba(255,255,255,.24);
-}
-
-.gallery-placeholder span {
-    color: #fff;
-}
-
-.gallery-placeholder:hover {
-    border-color: #fff;
-    background: rgba(255,255,255,.10);
-}
-
-/* Contact: black used only as a strong closing section */
-.contact-section {
-    background: var(--black);
-    border-top-color: var(--red);
-}
-
-.contact-card,
-.contact-cta {
-    border-color: rgba(217,40,47,.45);
-}
-
-.contact-card:hover,
-.contact-cta:hover {
-    background: var(--red);
-}
-
-.contact-arrow {
-    color: var(--red-bright);
+    position: absolute;
+    right: 28px;
+    bottom: 25px;
+    font-size: 18px;
+    color: rgba(255,255,255,.5);
+    transition: transform .3s ease, color .3s ease;
 }
 
 .contact-card:hover .contact-arrow {
     color: #fff;
+    transform: translate(3px,-3px);
 }
 
 .contact-cta {
-    border-color: var(--red);
+    margin-top: 26px;
+    min-height: 96px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(255,255,255,.14);
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    transition: background .3s ease, border-color .3s ease;
 }
 
 .contact-cta:hover {
-    background: var(--red);
-    border-color: var(--red);
+    background: rgba(255,255,255,.06);
+    border-color: rgba(255,255,255,.3);
 }
 
-/* Small red accents on section labels */
-.section-label,
-.info-number,
-.experience-number,
-.project-type {
-    color: var(--red) !important;
+.contact-cta span:last-child {
+    font-size: 22px;
+    letter-spacing: 0;
 }
 
-.experience-section .section-label,
-.gallery-section .section-label,
-.contact-section .section-label {
-    color: #fff !important;
+.contact-footer {
+    margin-top: 80px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    color: rgba(255,255,255,.3);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+@media (max-width:700px) {
+
+    .contact-section {
+        padding: 90px 7vw 35px;
+    }
+
+    .contact-heading {
+        margin-bottom: 46px;
+    }
+
+    .contact-heading h2 {
+        font-size: clamp(38px,11vw,52px);
+        letter-spacing: -2px;
+    }
+
+    .contact-heading p {
+        font-size: 12px;
+    }
+
+    .contact-links {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        min-height: 125px;
+        padding: 24px;
+    }
+
+    .contact-value {
+        margin-top: 22px;
+        font-size: 15px;
+    }
+
+    .contact-arrow {
+        right: 23px;
+        bottom: 22px;
+    }
+
+    .contact-cta {
+        min-height: 82px;
+        padding: 0 24px;
+        font-size: 10px;
+    }
+
+    .contact-footer {
+        margin-top: 60px;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 8px;
+    }
+
 }
